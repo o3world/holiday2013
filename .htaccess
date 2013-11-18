@@ -1,0 +1,7 @@
+# Begin http auth
+	AuthUserFile /var/protected/htpasswds/holiday2013.htpasswd
+	AuthgroupFile /dev/null
+	AuthName "Please enter your password"
+	AuthType Basic
+	require user holiday
+	# End http auth
