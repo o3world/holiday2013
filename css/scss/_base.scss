@@ -1,0 +1,280 @@
+/*
+ * base CSS
+ * 
+ ************************************************************************************************/
+
+
+/*
+ * breakpoint variable
+ *
+ ****************************************************************************/
+
+
+$breakpoint: 320;
+
+body:after {
+	content: 'mobile-portrait';
+	display: none;
+}
+
+
+/*
+ * base elements
+ *
+ ****************************************************************************/
+
+// default H tag sizes and spacing
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { margin-bottom: 0; line-height: 1.2em; color: $c-primary; }
+
+
+// custom H tag treatments
+h1, .h1 {
+	@include font-size( 34 ); }
+h2, .h2 {
+	@include font-size( 17 ); }
+h3, .h3 {
+	text-transform: uppercase; line-height: $f-baselineheight; @include font-size( 17 ); color: $c-brand; }
+
+// default p treatment
+p, ul, ol, dd { line-height: $f-baselineheight; }
+
+
+/*
+ * links
+ * 
+ ********************************************************/
+
+// universal link treatment
+a {
+	color: $c-brand; @include transition( color, .5s );
+
+	&:hover { text-decoration: none; color: $c-branddark; }
+}
+
+
+/*
+ * preloader
+ *
+ ****************************************************************************/
+
+#preload-container {
+	z-index: 500; position: fixed; @include linear-gradient( $c-skydark, $c-skylight ); width: 100%; height: 100%;
+}
+
+.preloader {
+	position: absolute; top: 0; left: 50%; margin-left: -85px; width: 171px; height: 585px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+}
+
+.preloader-content {
+	position: absolute; bottom: 0; padding-top: 15px; width: 171px; height: 146px; text-align: center;
+	
+	strong { display: block; @include font-size( 20 ); color: #fff; }
+}
+
+.preloader-animation { @include inline-block( ); width: 96px; height: 96px; background: url( '../images/preload-animation.gif' ) no-repeat 0 0; }
+
+
+/*
+ * social icons
+ *
+ ****************************************************************************/
+
+.social-container {
+	position: fixed; top: -40px; right: 40px;
+}
+
+// generic social container
+.social-item {
+	position: relative; @include inline-block( ); margin-left: 12px; width: 39px; height: 120px; background: url( '../images/sprite-social.png' ) no-repeat 0 0;
+	
+	&:first-child { margin-left: 0; }
+	
+	// social link within each container
+	a { position: absolute; bottom: 0; display: block; width: 39px; height: 39px; text-indent: -9999px; }
+}
+
+// specific social elements
+.social-facebook	 { /* default position */ }
+.social-twitter		 { top: -5px; background-position: -39px 0; }
+.social-googleplus	 { top: 15px; background-position: -78px 0; }
+
+
+/*
+ * base parallax definitions
+ *
+ ****************************************************************************/
+
+#scene {
+	position: fixed; bottom: 0; width: 100%; @include linear-gradient( $c-skydark, $c-skylight ); height: 100%;
+}
+
+.parallax-layer { position: absolute; height: 700px; background-repeat: no-repeat; }
+
+
+/*
+ * parallax layers
+ *
+ ****************************************************************************/
+
+
+/*
+ * background parallax (skyline)
+ *
+ ********************************************************/
+
+#bg-1 { bottom: 0; width: 7390px; background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; }
+
+
+/*
+ * midground parallax (buildings)
+ *
+ ********************************************************/
+
+#bg-2 { bottom: 0; width: 7390px; }
+
+// generic background tile
+.bg-mid-tile { position: absolute; bottom: 0; width: 821px; height: 700px; }
+
+// specific background tiles
+.bg-mid-tile-1	 { left: 0; background: url( '../images/bg-mid-1.png' ); }
+.bg-mid-tile-2	 { left: 821px; background: url( '../images/bg-mid-2.png' ); }
+.bg-mid-tile-3	 { left: 1642px; background: url( '../images/bg-mid-3.png' ); }
+.bg-mid-tile-4	 { left: 2463px; background: url( '../images/bg-mid-4.png' ); }
+.bg-mid-tile-5	 { left: 3284px; background: url( '../images/bg-mid-5.png' ); }
+.bg-mid-tile-6	 { left: 4105px; background: url( '../images/bg-mid-6.png' ); }
+.bg-mid-tile-7	 { left: 4926px; background: url( '../images/bg-mid-7.png' ); }
+.bg-mid-tile-8	 { left: 5747px; background: url( '../images/bg-mid-8.png' ); }
+.bg-mid-tile-9	 { left: 6568px; background: url( '../images/bg-mid-9.png' ); }
+
+// TEMP flat elements in midground
+#bg-2-sub-elements {
+	position: absolute; bottom: 0; width: 7390px; height: 700px; background: url( '../images/TEMP-elements.png' ) no-repeat 0 0;
+}
+
+
+/*
+ * foreground parallax (street level)
+ *
+ ********************************************************/
+
+#bg-3 { bottom: 0; width: 7390px; height: 73px; background: $c-road; }
+
+
+/*
+ * content region definitions
+ *
+ ****************************************************************************/
+
+.panel-content { position: absolute; @include box-sizing( ); left: 122px; width: 281px; height: 600px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
+
+// intro and outro content container
+.content-inner { position: absolute; bottom: 0; width: 100%; height: 235px; }
+
+// generic intro and outro text row
+.ribbon { display: block; line-height: 60px; }
+
+// text rows
+.ribbon-1 { margin-bottom: 27px; }
+.ribbon-2 { margin-bottom: 27px; text-transform: uppercase; @include font-size( 28 ); color: $c-brand; }
+.ribbon-3 {  }
+
+// intro container
+#intro-content {
+	left: 122px;
+	
+	// compensate for ribbon edge
+	.ribbon-3 { margin-left: 20px; }
+}
+
+// outro container
+#outro-content { left: 7050px; }
+
+
+/*
+ * cloud regions
+ *
+ ****************************************************************************/
+
+// individual default cloud
+.cloud { position: absolute; bottom: 400px; width: 8000px; height: 250px; background: url( '../images/sprite-clouds.png' ) no-repeat 0 0; }
+
+// unique cloud sprites
+.cloud-1 { /* default position */ }
+.cloud-2 { background-position: 0 -250px; }
+
+
+/*
+ * individual people elements
+ *
+ ****************************************************************************/
+
+// individual default person
+.person { z-index: 1; position: absolute; display: block; height: 120px; background: url( '../images/sprite-people.png' ); text-indent: -9999px; }
+
+// unique people
+#person-andrew 	{ bottom: -10px; left: 1065px; width: 82px; background-position: -651px 0; }
+#person-amber 	{ bottom: 20px; left: 5560px; width: 82px; background-position: -977px 0; }
+#person-brian 	{ bottom: -5px; left: 1150px; width: 82px; /* default position */ }
+#person-chris 	{ bottom: 20px; left: 1880px; width: 82px; background-position: -733px 0; }
+#person-dane 	{ bottom: 55px; left: 4115px; width: 81px; background-position: -407px 0; }
+#person-howie 	{ bottom: 55px; left: 4050px; width: 81px; background-position: -326px 0; }
+#person-jack 	{ bottom: 5px; left: 2615px; width: 81px; background-position: -164px 0; }
+#person-jacob 	{ bottom: 10px; left: 5325px; width: 82px; background-position: -895px 0; }
+#person-jay 	{ bottom: 15px; left: 1815px; width: 82px; background-position: -82px 0; }
+#person-john 	{ bottom: 10px; left: 6005px; width: 81px; background-position: -1059px 0; }
+#person-justin 	{ bottom: 0; left: 2680px; width: 81px; background-position: -245px 0; }
+#person-keith 	{ bottom: 10px; left: 6205px; width: 81px; background-position: -1140px 0; }
+#person-kris 	{ bottom: 5px; left: 5400px; width: 81px; background-position: -488px 0; }
+#person-mike 	{ bottom: 25px; left: 6150px; width: 82px; background-position: -1221px 0; }
+#person-marie 	{ bottom: 20px; left: 5485px; width: 80px; background-position: -815px 0; }
+#person-robby 	{ bottom: 35px; left: 6070px; width: 82px; background-position: -569px 0; }
+
+
+/*
+ * fact elements
+ *
+ ****************************************************************************/
+
+#container-facts { z-index: 50; position: absolute; width: 5500px; height: 700px; }
+
+// generic fact item
+.fact { position: absolute; bottom: 200px; display: table; box-shadow: 0 0 10px rgba( #000, .3 ); border-radius: 4px; border: 1px solid #fff; width: 285px; height: 120px; @include linear-gradient( $c-neutrallight, $c-neutral ); }
+
+// fact content container for vertical centering
+.fact-content { display: table-cell; padding: 0 15px; vertical-align: middle; text-align: center; }
+
+// generic pointer arrow
+.fact-arrow { position: absolute; left: 50%; margin-left: -16px; border-right: 16px solid transparent; border-left: 16px solid transparent; width: 0; height: 0; }
+
+// direction specific arrows
+.fact-arrow-top { top: -16px; border-bottom: 16px solid $c-neutrallight; }
+.fact-arrow-bottom { bottom: -16px; border-top: 16px solid $c-neutral; }
+
+// specific facts
+#f-1 	{ left: 615px; bottom: 150px; width: 190px; }
+#f-2 	{ left: 732px; bottom: 150px; width: 220px; } 
+#f-3 	{ left: 1036px; bottom: 218px; width: 260px; }
+#f-4 	{ left: 1256px; bottom: 412px; width: 335px; }
+#f-5 	{ left: 1538px; bottom: 340px; width: 250px; }
+#f-6 	{ left: 1775px; bottom: 395px; width: 285px; }
+#f-7 	{ left: 2004px; bottom: 280px; width: 310px; }
+#f-8 	{ left: 2302px; bottom: 450px; width: 240px; }
+#f-9 	{ left: 2572px; bottom: 380px; width: 220px; }
+#f-10 	{ left: 2825px; bottom: 130px; width: 275px; }
+#f-11 	{ left: 3042px; bottom: 244px; width: 300px; }
+#f-12 	{ left: 3330px; bottom: 320px; width: 240px; }
+#f-13 	{ left: 3605px; bottom: 350px; width: 230px; }
+#f-14 	{ left: 3822px; bottom: 235px; width: 285px; }
+#f-15 	{ left: 4070px; bottom: 325px; width: 300px; }
+#f-16 	{ left: 4362px; bottom: 120px; width: 200px; }
+#f-17 	{ left: 4624px; bottom: 425px; width: 250px; }
+#f-18 	{ left: 4890px; bottom: 140px; width: 240px; }
+#f-19 	{ left: 5074px; bottom: 352px; width: 230px; }
+#f-20 	{ left: 5366px; bottom: 415px; width: 320px; }
+#f-21 	{ left: 5645px; bottom: 250px; width: 260px; }
+#f-22 	{ left: 5915px; bottom: 355px; width: 210px; }
+#f-23 	{ left: 6170px; bottom: 250px; width: 240px; }
+#f-24 	{ left: 6384px; bottom: 135px; width: 240px; }
+#f-25 	{ left: 6625px; bottom: 172px; width: 300px; }
+

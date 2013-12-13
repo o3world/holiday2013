@@ -1,0 +1,87 @@
+/*
+ * define @font-face sources for web fonts - http://css-tricks.com/snippets/css/using-font-face
+ * 
+ ************************************************************************************************/
+ 
+ 
+/* @license
+ * MyFonts Webfont Build ID 2428971, 2012-12-11T17:37:16-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: PF Din Text Comp Pro Medium Italic by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/medium-italic/
+ * 
+ * Webfont: PF Din Text Comp Pro Light Italic by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/light-italic/
+ * 
+ * Webfont: PF Din Text Comp Pro Medium by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/medium/
+ * 
+ * Webfont: PF Din Text Comp Pro Light by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/light/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2428971
+ * Webfonts copyright: Copyright (c) 2002, 2005 Parachute&#x00A8;, www.parachute.gr.  All rights reserved.
+ * 
+ * © 2012 Bitstream Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/25102b");
+
+
+@font-face {
+	font-family: 'WebDin';
+	src: url('../fonts/DINWeb-Cond.eot'); /* IE9 Compatability Modes */
+	src: url('../fonts/DINWeb-Cond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/DINWeb-Cond.woff') format('woff'), /* Modern Browsers */
+	     /* PFDinTextCompPro-Light */
+	     url('../fonts/25102B_3_0.ttf') format('truetype'); /* Safari <5.1, Android, iOS <5.0 */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'WebDin';
+	src: url('../fonts/DINWeb-CondBold.eot'); /* IE9 Compatability Modes */
+	src: url('../fonts/DINWeb-CondBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/DINWeb-CondBold.woff') format('woff'), /* Modern Browsers */
+	     /* PFDinTextCompPro-Medium */
+	     url('../fonts/25102B_2_0.ttf') format('truetype'); /* Safari <5.1, Android, iOS <5.0 */
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'WebDin';
+	src: url('../fonts/DINWeb-CondIta.eot'); /* IE9 Compatability Modes */
+	src: url('../fonts/DINWeb-CondIta.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/DINWeb-CondIta.woff') format('woff'), /* Modern Browsers */
+	     /* PFDinTextCompPro-LightItalic */
+	     url('../fonts/25102B_1_0.ttf') format('truetype'); /* Safari <5.1, Android, iOS <5.0 */
+	     /*url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'WebDin';
+	src: url('../fonts/DINWeb-CondBoldIta.eot'); /* IE9 Compatability Modes */
+	src: url('../fonts/DINWeb-CondBoldIta.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/DINWeb-CondBoldIta.woff') format('woff'), /* Modern Browsers */
+	     /* PFDinTextCompPro-MediumItalic */
+	     url('../fonts/25102B_0_0.ttf') format('truetype'); /* Safari <5.1, Android, iOS <5.0 */
+	     /*url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+	font-weight: bold;
+	font-style: italic;
+}

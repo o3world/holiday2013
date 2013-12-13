@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+	
+	Chris Loringer     -- Designer       -- @cloringer
+    Brian Crumley      -- Developer      -- @briancrumley
+    David Dylan Thomas -- Content Writer -- @movie_pundit
+
+# THANKS
+
+    Barcamp Philadelphia 2013 Team
+    Mary Ann Geier, Maurice Gaston, Trevor Lalish-Menagh, Joe Campbell
+	
+    Ghosts of Barcamp Philadelphia's Past
+    Sarah Feidt, JP Toto
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+	jQuery Waypoints, Placeholders.js

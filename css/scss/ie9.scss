@@ -1,0 +1,34 @@
+/*
+ * IE9... better than it's predecessors, but still not quite right
+ *
+ ************************************************************************************************/
+
+
+// set-up mixins and variables
+@import "mixins";
+@import "variables";
+
+
+/*
+ * IE9 specific fixes
+ * 
+ ******************************************************************/
+
+
+
+
+
+/*
+ * IE9 1200px breakpoint
+ * 
+ ******************************************************************/
+
+
+@media only screen and (min-width: 1200px) {
+	
+	// import global 1200 CSS
+	@import "1200";
+	
+	// IE9 1200 breakpoint-specific fixes
+	// INSERT
+}

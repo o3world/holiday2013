@@ -1,0 +1,44 @@
+/*
+ * site-wide SCSS variable declaration
+ *
+ ************************************************************************************************/
+ 
+
+/*
+ * color declarations
+ *
+ ********************************************************/
+
+// text - grey
+$c-primary:			#1a1a1a;
+
+// text - O3 red
+$c-brandlight:		#be0000;
+$c-brand:			#c00;
+$c-branddark:		#900;
+$c-brandextradark:	#300;
+
+// sky - blue
+$c-skylight: 		#d0e8f5;
+$c-skydark:			#b4d1e1;
+
+// road - grey
+$c-road: 			#707070;
+
+// neutral - grey
+$c-neutrallight:	#fefefe;
+$c-neutral:			#e2e2e2;
+
+
+/*
+ * font declarations
+ *
+ ********************************************************/
+
+// global font rules
+$f-base:				Helvetica, Arial, sans-serif;
+$f-basesize:			16;
+$f-baselineheight:		1.5em;
+
+// primary font family
+$f-primary:				'WebDin', Helvetica, Arial, sans-serif;

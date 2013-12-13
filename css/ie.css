@@ -1,0 +1,1037 @@
+@import url("//hello.myfonts.net/count/25102b");
+/*
+ * IE is "special", so it gets it's very own CSS build
+ *
+ ************************************************************************************************/
+/*
+ * mixins for common CSS properties
+ *
+ ************************************************************************************************/
+/*
+ * site-wide SCSS variable declaration
+ *
+ ************************************************************************************************/
+/*
+ * color declarations
+ *
+ ********************************************************/
+/*
+ * font declarations
+ *
+ ********************************************************/
+/*
+ * global reset and normalization CSS
+ *
+ * box model property order
+ *
+ ************************************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\000039}}
+* {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  /* font-size: 100%; */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000311}}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* adjusts the font "weight" in webkit browsers to more closely match others - http://maxvoltar.com/archive/-webkit-font-smoothing */
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 38, 73, 0.5);
+  -moz-tap-highlight-color: rgba(0, 38, 73, 0.5);
+  -o-tap-highlight-color: rgba(0, 38, 73, 0.5); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000319}}
+body {
+  height: 100%;
+  line-height: 1.5em;
+  font-family: "WebDin", Helvetica, Arial, sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000326}}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000328}}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 240px;
+  height: 135px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000329}}
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000331}}
+[hidden] {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000336}}
+ul {
+  list-style-type: circle; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000337}}
+p {
+  line-height: 1.83333em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000338}}
+dl, ol, ul {
+  margin-top: 1.5em;
+  line-height: 1.83333em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000339}}
+p + p {
+  margin-top: 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000340}}
+ol, ul {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 1.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000343}}
+li ol,
+li ul,
+dd ul {
+  margin: 0;
+  font-size: 1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000346}}
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000349}}
+  .list-inline > li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000352}}
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000358}}
+blockquote {
+  margin: 0 0 1.5em 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000362}}
+address {
+  font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000366}}
+:focus {
+  outline: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000372}}
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000373}}
+a:focus {
+  outline: thin dotted; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000375}}
+a[href='#'] {
+  color: #f00; }
+
+/* TBD - test CSS to find empty links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000377}}
+i {
+  font-style: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000380}}
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  /* clean up janky edges of scaled images in IE<9 */
+  -moz-user-drag: -moz-none;
+  -webkit-user-drag: none;
+  user-drag: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000390}}
+button, input, select, textarea {
+  vertical-align: top;
+  *vertical-align: middle;
+  font-family: sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000392}}
+label {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000393}}
+label, legend {
+  display: block;
+  *margin-left: -7px;
+  line-height: 1.5em;
+  cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\0000394}}
+legend {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003103}}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=file],
+textarea,
+select {
+  /* width: 190px; */
+  max-width: 100%;
+  border-radius: 0;
+  /* remove rounded corners on iOS */
+  border: 1px solid #666;
+  padding: 0;
+  /* padding: .5em; */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003105}}
+input[type=text] {
+  -webkit-appearance: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003108}}
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  margin-top: 3px;
+  /* margin-top: 7px; */
+  *width: 13px;
+  *height: 13px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003110}}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  display: inline;
+  margin-left: .5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003113}}
+input[type=submit],
+input[type=button] {
+  border: none;
+  padding: .5em 1em;
+  /* background: #666; color: #fff; */
+  cursor: pointer;
+  -webkit-apperance: none;
+  *overflow: visible;
+  text-transform: uppercase;
+  /* silly ass IE7 - add if you want to hide button text */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003116}}
+textarea {
+  width: 220px;
+  max-width: 100%;
+  height: 8em;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003120}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003124}}
+sub, sup {
+  position: relative;
+  vertical-align: baseline;
+  line-height: 0;
+  font-size: 75%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003125}}
+sup {
+  top: -0.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003126}}
+sub {
+  bottom: -0.25em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003130}}
+.meta {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003131}}
+.hidden {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003136}}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003137}}
+.cf:after {
+  clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_reset\.scss}line{font-family:\00003138}}
+.cf {
+  *zoom: 1; }
+
+/* for IE 6/7 to trigger hasLayout */
+/*
+ * define @font-face sources for web fonts - http://css-tricks.com/snippets/css/using-font-face
+ * 
+ ************************************************************************************************/
+/* @license
+ * MyFonts Webfont Build ID 2428971, 2012-12-11T17:37:16-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: PF Din Text Comp Pro Medium Italic by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/medium-italic/
+ * 
+ * Webfont: PF Din Text Comp Pro Light Italic by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/light-italic/
+ * 
+ * Webfont: PF Din Text Comp Pro Medium by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/medium/
+ * 
+ * Webfont: PF Din Text Comp Pro Light by Parachute
+ * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-comp-pro/light/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2428971
+ * Webfonts copyright: Copyright (c) 2002, 2005 Parachute&#x00A8;, www.parachute.gr.  All rights reserved.
+ * 
+ * © 2012 Bitstream Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'WebDin';
+  src: url("../fonts/DINWeb-Cond.eot");
+  /* IE9 Compatability Modes */
+  src: url("../fonts/DINWeb-Cond.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-Cond.woff") format("woff"), url("../fonts/25102B_3_0.ttf") format("truetype");
+  /* Safari <5.1, Android, iOS <5.0 */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'WebDin';
+  src: url("../fonts/DINWeb-CondBold.eot");
+  /* IE9 Compatability Modes */
+  src: url("../fonts/DINWeb-CondBold.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-CondBold.woff") format("woff"), url("../fonts/25102B_2_0.ttf") format("truetype");
+  /* Safari <5.1, Android, iOS <5.0 */
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'WebDin';
+  src: url("../fonts/DINWeb-CondIta.eot");
+  /* IE9 Compatability Modes */
+  src: url("../fonts/DINWeb-CondIta.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-CondIta.woff") format("woff"), url("../fonts/25102B_1_0.ttf") format("truetype");
+  /* Safari <5.1, Android, iOS <5.0 */
+  /*url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'WebDin';
+  src: url("../fonts/DINWeb-CondBoldIta.eot");
+  /* IE9 Compatability Modes */
+  src: url("../fonts/DINWeb-CondBoldIta.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-CondBoldIta.woff") format("woff"), url("../fonts/25102B_0_0.ttf") format("truetype");
+  /* Safari <5.1, Android, iOS <5.0 */
+  /*url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+  font-weight: bold;
+  font-style: italic; }
+
+/*
+ * base CSS
+ * 
+ ************************************************************************************************/
+/*
+ * breakpoint variable
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000315}}
+body:after {
+  content: 'mobile-portrait';
+  display: none; }
+
+/*
+ * base elements
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000328}}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0;
+  line-height: 1.2em;
+  color: #1a1a1a; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000332}}
+h1, .h1 {
+  font-size: 34px;
+  font-size: 2.125rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000334}}
+h2, .h2 {
+  font-size: 17px;
+  font-size: 1.0625rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000336}}
+h3, .h3 {
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  color: #cc0000; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000340}}
+p, ul, ol, dd {
+  line-height: 1.5em; }
+
+/*
+ * links
+ * 
+ ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000349}}
+a {
+  color: #cc0000;
+  -webkit-transition: color 0.5s linear;
+  -moz-transition: color 0.5s linear;
+  -ms-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  transition: color 0.5s linear; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000352}}
+  a:hover {
+    text-decoration: none;
+    color: #990000; }
+
+/*
+ * preloader
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000361}}
+#preload-container {
+  z-index: 500;
+  position: fixed;
+  background: -webkit-linear-gradient(top, #b4d1e1 0%, #d0e8f5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b4d1e1), to(#d0e8f5)) 0 0;
+  background: -moz-linear-gradient(top, #b4d1e1, #d0e8f5) 0 0;
+  background: -ms-linear-gradient(top, #b4d1e1, #d0e8f5);
+  background: -o-linear-gradient(top, #b4d1e1, #d0e8f5);
+  width: 100%;
+  height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000365}}
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -85px;
+  width: 171px;
+  height: 585px;
+  background: url("../images/bkg-preload.png") no-repeat 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000369}}
+.preloader-content {
+  position: absolute;
+  bottom: 0;
+  padding-top: 15px;
+  width: 171px;
+  height: 146px;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000372}}
+  .preloader-content strong {
+    display: block;
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #fff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000375}}
+.preloader-animation {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 96px;
+  height: 96px;
+  background: url("../images/preload-animation.gif") no-repeat 0 0; }
+
+/*
+ * social icons
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000383}}
+.social-container {
+  position: fixed;
+  top: -40px;
+  right: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000388}}
+.social-item {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 12px;
+  width: 39px;
+  height: 120px;
+  background: url("../images/sprite-social.png") no-repeat 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000391}}
+  .social-item:first-child {
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000394}}
+  .social-item a {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 39px;
+    height: 39px;
+    text-indent: -9999px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000398}}
+.social-facebook {
+  /* default position */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000399}}
+.social-twitter {
+  top: -5px;
+  background-position: -39px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003100}}
+.social-googleplus {
+  top: 15px;
+  background-position: -78px 0; }
+
+/*
+ * base parallax definitions
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003108}}
+#scene {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #b4d1e1 0%, #d0e8f5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b4d1e1), to(#d0e8f5)) 0 0;
+  background: -moz-linear-gradient(top, #b4d1e1, #d0e8f5) 0 0;
+  background: -ms-linear-gradient(top, #b4d1e1, #d0e8f5);
+  background: -o-linear-gradient(top, #b4d1e1, #d0e8f5);
+  height: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003112}}
+.parallax-layer {
+  position: absolute;
+  height: 700px;
+  background-repeat: no-repeat; }
+
+/*
+ * parallax layers
+ *
+ ****************************************************************************/
+/*
+ * background parallax (skyline)
+ *
+ ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003126}}
+#bg-1 {
+  bottom: 0;
+  width: 7390px;
+  background: url("../images/bg-background.png");
+  background-position: left bottom;
+  background-repeat: no-repeat; }
+
+/*
+ * midground parallax (buildings)
+ *
+ ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003134}}
+#bg-2 {
+  bottom: 0;
+  width: 7390px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003137}}
+.bg-mid-tile {
+  position: absolute;
+  bottom: 0;
+  width: 821px;
+  height: 700px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003140}}
+.bg-mid-tile-1 {
+  left: 0;
+  background: url("../images/bg-mid-1.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003141}}
+.bg-mid-tile-2 {
+  left: 821px;
+  background: url("../images/bg-mid-2.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003142}}
+.bg-mid-tile-3 {
+  left: 1642px;
+  background: url("../images/bg-mid-3.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003143}}
+.bg-mid-tile-4 {
+  left: 2463px;
+  background: url("../images/bg-mid-4.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003144}}
+.bg-mid-tile-5 {
+  left: 3284px;
+  background: url("../images/bg-mid-5.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003145}}
+.bg-mid-tile-6 {
+  left: 4105px;
+  background: url("../images/bg-mid-6.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003146}}
+.bg-mid-tile-7 {
+  left: 4926px;
+  background: url("../images/bg-mid-7.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003147}}
+.bg-mid-tile-8 {
+  left: 5747px;
+  background: url("../images/bg-mid-8.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003148}}
+.bg-mid-tile-9 {
+  left: 6568px;
+  background: url("../images/bg-mid-9.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003151}}
+#bg-2-sub-elements {
+  position: absolute;
+  bottom: 0;
+  width: 7390px;
+  height: 700px;
+  background: url("../images/TEMP-elements.png") no-repeat 0 0; }
+
+/*
+ * foreground parallax (street level)
+ *
+ ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003161}}
+#bg-3 {
+  bottom: 0;
+  width: 7390px;
+  height: 73px;
+  background: #707070; }
+
+/*
+ * content region definitions
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003169}}
+.panel-content {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 122px;
+  width: 281px;
+  height: 600px;
+  background: url("../images/bkg-panel.png") no-repeat 0 0;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003172}}
+.content-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 235px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003175}}
+.ribbon {
+  display: block;
+  line-height: 60px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003178}}
+.ribbon-1 {
+  margin-bottom: 27px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003179}}
+.ribbon-2 {
+  margin-bottom: 27px;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #cc0000; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003183}}
+#intro-content {
+  left: 122px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003187}}
+  #intro-content .ribbon-3 {
+    margin-left: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003191}}
+#outro-content {
+  left: 7050px; }
+
+/*
+ * cloud regions
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003200}}
+.cloud {
+  position: absolute;
+  bottom: 400px;
+  width: 8000px;
+  height: 250px;
+  background: url("../images/sprite-clouds.png") no-repeat 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003203}}
+.cloud-1 {
+  /* default position */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003204}}
+.cloud-2 {
+  background-position: 0 -250px; }
+
+/*
+ * individual people elements
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003213}}
+.person {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  height: 120px;
+  background: url("../images/sprite-people.png");
+  text-indent: -9999px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003216}}
+#person-andrew {
+  bottom: -10px;
+  left: 1065px;
+  width: 82px;
+  background-position: -651px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003217}}
+#person-amber {
+  bottom: 20px;
+  left: 5560px;
+  width: 82px;
+  background-position: -977px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003218}}
+#person-brian {
+  bottom: -5px;
+  left: 1150px;
+  width: 82px;
+  /* default position */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003219}}
+#person-chris {
+  bottom: 20px;
+  left: 1880px;
+  width: 82px;
+  background-position: -733px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003220}}
+#person-dane {
+  bottom: 55px;
+  left: 4115px;
+  width: 81px;
+  background-position: -407px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003221}}
+#person-howie {
+  bottom: 55px;
+  left: 4050px;
+  width: 81px;
+  background-position: -326px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003222}}
+#person-jack {
+  bottom: 5px;
+  left: 2615px;
+  width: 81px;
+  background-position: -164px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003223}}
+#person-jacob {
+  bottom: 10px;
+  left: 5325px;
+  width: 82px;
+  background-position: -895px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003224}}
+#person-jay {
+  bottom: 15px;
+  left: 1815px;
+  width: 82px;
+  background-position: -82px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003225}}
+#person-john {
+  bottom: 10px;
+  left: 6005px;
+  width: 81px;
+  background-position: -1059px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003226}}
+#person-justin {
+  bottom: 0;
+  left: 2680px;
+  width: 81px;
+  background-position: -245px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003227}}
+#person-keith {
+  bottom: 10px;
+  left: 6205px;
+  width: 81px;
+  background-position: -1140px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003228}}
+#person-kris {
+  bottom: 5px;
+  left: 5400px;
+  width: 81px;
+  background-position: -488px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003229}}
+#person-mike {
+  bottom: 25px;
+  left: 6150px;
+  width: 82px;
+  background-position: -1221px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003230}}
+#person-marie {
+  bottom: 20px;
+  left: 5485px;
+  width: 80px;
+  background-position: -815px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003231}}
+#person-robby {
+  bottom: 35px;
+  left: 6070px;
+  width: 82px;
+  background-position: -569px 0; }
+
+/*
+ * fact elements
+ *
+ ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003239}}
+#container-facts {
+  z-index: 50;
+  position: absolute;
+  width: 5500px;
+  height: 700px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003242}}
+.fact {
+  position: absolute;
+  bottom: 200px;
+  display: table;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  border: 1px solid #fff;
+  width: 285px;
+  height: 120px;
+  background: -webkit-linear-gradient(top, #fefefe 0%, #e2e2e2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e2e2e2)) 0 0;
+  background: -moz-linear-gradient(top, #fefefe, #e2e2e2) 0 0;
+  background: -ms-linear-gradient(top, #fefefe, #e2e2e2);
+  background: -o-linear-gradient(top, #fefefe, #e2e2e2); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003245}}
+.fact-content {
+  display: table-cell;
+  padding: 0 15px;
+  vertical-align: middle;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003248}}
+.fact-arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  border-right: 16px solid transparent;
+  border-left: 16px solid transparent;
+  width: 0;
+  height: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003251}}
+.fact-arrow-top {
+  top: -16px;
+  border-bottom: 16px solid #fefefe; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003252}}
+.fact-arrow-bottom {
+  bottom: -16px;
+  border-top: 16px solid #e2e2e2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003255}}
+#f-1 {
+  left: 615px;
+  bottom: 150px;
+  width: 190px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003256}}
+#f-2 {
+  left: 732px;
+  bottom: 150px;
+  width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003257}}
+#f-3 {
+  left: 1036px;
+  bottom: 218px;
+  width: 260px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003258}}
+#f-4 {
+  left: 1256px;
+  bottom: 412px;
+  width: 335px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003259}}
+#f-5 {
+  left: 1538px;
+  bottom: 340px;
+  width: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003260}}
+#f-6 {
+  left: 1775px;
+  bottom: 395px;
+  width: 285px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003261}}
+#f-7 {
+  left: 2004px;
+  bottom: 280px;
+  width: 310px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003262}}
+#f-8 {
+  left: 2302px;
+  bottom: 450px;
+  width: 240px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003263}}
+#f-9 {
+  left: 2572px;
+  bottom: 380px;
+  width: 220px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003264}}
+#f-10 {
+  left: 2825px;
+  bottom: 130px;
+  width: 275px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003265}}
+#f-11 {
+  left: 3042px;
+  bottom: 244px;
+  width: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003266}}
+#f-12 {
+  left: 3330px;
+  bottom: 320px;
+  width: 240px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003267}}
+#f-13 {
+  left: 3605px;
+  bottom: 350px;
+  width: 230px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003268}}
+#f-14 {
+  left: 3822px;
+  bottom: 235px;
+  width: 285px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003269}}
+#f-15 {
+  left: 4070px;
+  bottom: 325px;
+  width: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003270}}
+#f-16 {
+  left: 4362px;
+  bottom: 120px;
+  width: 200px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003271}}
+#f-17 {
+  left: 4624px;
+  bottom: 425px;
+  width: 250px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003272}}
+#f-18 {
+  left: 4890px;
+  bottom: 140px;
+  width: 240px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003273}}
+#f-19 {
+  left: 5074px;
+  bottom: 352px;
+  width: 230px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003274}}
+#f-20 {
+  left: 5366px;
+  bottom: 415px;
+  width: 320px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003275}}
+#f-21 {
+  left: 5645px;
+  bottom: 250px;
+  width: 260px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003276}}
+#f-22 {
+  left: 5915px;
+  bottom: 355px;
+  width: 210px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003277}}
+#f-23 {
+  left: 6170px;
+  bottom: 250px;
+  width: 240px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003278}}
+#f-24 {
+  left: 6384px;
+  bottom: 135px;
+  width: 240px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003279}}
+#f-25 {
+  left: 6625px;
+  bottom: 172px;
+  width: 300px; }
+
+/*
+ * universal IE fixes
+ *
+ ****************************************************************************/
+/*
+ * base elements
+ *
+ ********************************************************/
