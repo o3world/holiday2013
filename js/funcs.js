@@ -109,6 +109,7 @@ function handleOverallProgress( event ) {
 	if( preload.progress == 1 ) {
 		
 		var s = skrollr.init( {
+			forceHeight: true,
 			smoothScrolling: true,
 			easing: {
 				vibrate: function( p ) {
@@ -119,7 +120,7 @@ function handleOverallProgress( event ) {
 				currST = jQuery( window ).scrollTop( );
 			}
 		} );
-		
+				
 		setTimeout( function( ) {
 			jQuery( '#preload-container' ).fadeOut( 'slow' );
 		}, 500 );

@@ -63,7 +63,7 @@ a {
 }
 
 .preloader {
-	position: absolute; top: 0; left: 50%; margin-left: -85px; width: 171px; height: 585px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+	position: absolute; bottom: 50%; left: 50%; margin-bottom: -100px; margin-left: -85px; width: 171px; height: 585px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
 }
 
 .preloader-content {
@@ -154,6 +154,78 @@ a {
 
 
 /*
+ * snow elements
+ *
+ ****************************************************************************/
+
+@keyframes snow-midground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 400px 400px}
+}
+
+@-moz-keyframes snow-midground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 400px 400px }
+}
+
+@-webkit-keyframes snow-midground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+ 	100% { background-position: 400px 400px }
+}
+
+@-ms-keyframes snow-midground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 400px 400px }
+}
+
+
+.snow-midground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/bkg-snow-midground');
+	
+	-webkit-animation: snow-midground 20s linear infinite;
+	-moz-animation: snow-midground 20s linear infinite;
+	-ms-animation: snow-midground 20s linear infinite;
+	animation: snow-midground 20s linear infinite;
+}
+
+@keyframes snow-foreground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 500px 1000px }
+}
+
+@-moz-keyframes snow-foreground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 500px 1000px }
+}
+
+@-webkit-keyframes snow-foreground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+ 	100% { background-position: 500px 1000px }
+}
+
+@-ms-keyframes snow-foreground {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	100% { background-position: 500px 1000px }
+}
+
+
+.snow-foreground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/bkg-snow-foreground');
+	
+	-webkit-animation: snow-foreground 20s linear infinite;
+	-moz-animation: snow-foreground 20s linear infinite;
+	-ms-animation: snow-foreground 20s linear infinite;
+	animation: snow-foreground 20s linear infinite;
+}
+
+
+/*
  * foreground parallax (street level)
  *
  ********************************************************/
@@ -166,7 +238,11 @@ a {
  *
  ****************************************************************************/
 
-.panel-content { position: absolute; @include box-sizing( ); left: 122px; width: 281px; height: 600px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
+#bg-panels {
+	height: 100%;
+}
+
+.panel-content { position: absolute; bottom: 330px; @include box-sizing( ); left: 122px; width: 281px; height: 600px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
 
 // intro and outro content container
 .content-inner { position: absolute; bottom: 0; width: 100%; height: 235px; }
@@ -188,7 +264,7 @@ a {
 }
 
 // outro container
-#outro-content { left: 7050px; }
+#outro-content { left: 7030px; }
 
 
 /*
