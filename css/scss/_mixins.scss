@@ -43,6 +43,13 @@
 	opacity: $value; // good browsers
 }
 
+@mixin animation( $name, $duration, $function, $loop ) {
+	-webkit-animation:	 $name $duration $function $loop;
+	-moz-animation:		 $name $duration $function $loop;
+	-ms-animation:		 $name $duration $function $loop;
+	animation:			 $name $duration $function $loop;
+}
+
 @mixin transition( $property, $duration, $function: linear ) {	
 	-webkit-transition: $property $duration $function;
 	-moz-transition: 	$property $duration $function;
