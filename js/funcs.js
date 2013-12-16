@@ -49,7 +49,7 @@ var pm1 = jQuery( '#bg-1' );
 
 jQuery( pm1 ).attr( 'data-' + ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ) / 2 ) + 'px' );
 
-var pm2 = jQuery( '#bg-2, #bg-3, #bg-panels' );
+var pm2 = jQuery( '#bg-2, #bg-panels' );
 
 jQuery( pm2 ).attr( 'data-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
 
@@ -79,16 +79,6 @@ function reload( ) {
     manifest = wdImgs;
 };
 
-/*
-var queue = new createjs.LoadQueue();
-
-queue.installPlugin(createjs.Sound);
-queue.addEventListener("complete", handleComplete);
-queue.loadFile({id:"sound", src:"http://path/to/sound.mp3"});
-queue.loadManifest([ {id: "myImage", src:"path/to/myImage.jpg"} ]);
-
-function handleComplete() { createjs.Sound.play("sound"); var image = queue.getResult("myImage"); document.body.appendChild(image); }
-*/
 
 function loadAll( ) {
     
@@ -117,7 +107,7 @@ function handleOverallProgress( event ) {
 				}
 			},
 			render: function( info ) {
-				currST = jQuery( window ).scrollTop( );
+				currST = 0;
 			}
 		} );
 				
@@ -130,6 +120,68 @@ function handleOverallProgress( event ) {
 function handleFileError( event ) {
     console.log( 'error loading asset' );
 };
+
+
+
+
+
+
+var scrollInterval/* , scrollDistance, scrollSpeed */ = 100; //touch controls
+
+function moveScene( direction ) {
+	
+	scrollInterval = setInterval( function( ) {
+		
+		//scrollPos = -( currST + ( direction * 100 ) )
+		
+		jQuery( window ).scrollTop( jQuery( window ).scrollTop( ) + -( direction * 100 ) );
+		
+		//jQuery( window ).scrollTo( 0, '+=100px' );
+		
+		//currST = scrollPos;
+		
+		//console.log( "currST: " + currST );
+		
+		/*
+scrollPos = -( currST + ( direction * 100 ) )
+		
+		myScroll.scrollTo( 0, scrollPos );
+		
+		skrollr.iscroll.scrollTo( 0, -( jQuery( window ).scrollTop( ) + ( direction * scrollDistance ) ), scrollSpeed );
+				
+		console.log( -( jQuery( window ).scrollTop( ) + ( direction * 100 ) ) );
+*/
+	}, 100 );
+};
+
+jQuery( '#scRight' ).bind( 'touchstart mousedown', function( ){
+	clearInterval( scrollInterval );
+	moveScene( -1 );
+} );
+jQuery( '#scRight' ).bind( 'touchend mouseup', function( ) {
+	clearInterval( scrollInterval );
+} );
+jQuery( '#scLeft' ).bind( 'touchstart mousedown', function( ) {
+	clearInterval( scrollInterval );
+	moveScene( 1 );
+} );
+jQuery( '#scLeft' ).bind( 'touchend mouseup', function( ) {
+	clearInterval( scrollInterval );
+} );
+
+/*
+var scrollScale = 1;
+var s = skrollr.init({
+	smoothScrolling: true,
+	easing: {
+		vibrate: function(p) {
+			return Math.sin(p * 10 * Math.PI);
+		}
+	},
+	scale: scrollScale//1+redPercentage,
+});
+*/
+
 
 
 
@@ -150,4 +202,8 @@ jQuery( document ).ready( function( ) {
 	
 	// preload content
 	initPreloader( );
+	
+	var currST = 0;
+	
+	//myScroll = new iScroll( document.body );
 } );
