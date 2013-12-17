@@ -169,21 +169,6 @@ jQuery( '#scLeft' ).bind( 'touchend mouseup', function( ) {
 	clearInterval( scrollInterval );
 } );
 
-/*
-var scrollScale = 1;
-var s = skrollr.init({
-	smoothScrolling: true,
-	easing: {
-		vibrate: function(p) {
-			return Math.sin(p * 10 * Math.PI);
-		}
-	},
-	scale: scrollScale//1+redPercentage,
-});
-*/
-
-
-
 
 /*
  * jQuery Actions
@@ -202,8 +187,4 @@ jQuery( document ).ready( function( ) {
 	
 	// preload content
 	initPreloader( );
-	
-	var currST = 0;
-	
-	//myScroll = new iScroll( document.body );
 } );

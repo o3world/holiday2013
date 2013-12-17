@@ -4,3 +4,130 @@
  ************************************************************************************************/
 
 
+/*
+ * preloader
+ *
+ ****************************************************************************/
+
+.preloader {
+	background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+}
+
+.preloader-animation { background: url( '../images/preload-animation.gif' ) no-repeat 0 0; }
+
+
+/*
+ * touch control hint
+ *
+ ****************************************************************************/
+
+#touch-control {
+	background-image: url( '../images/touch-divider@2x.gif' ); background-size: 3px 21px;
+}
+
+
+/*
+ * social icons
+ *
+ ****************************************************************************/
+
+// generic social container
+.social-item {
+	background-image: url( '../images/sprite-social@2x.png' ); background-size: 117px 120px;
+}
+
+
+/*
+ * base parallax definitions
+ *
+ ****************************************************************************/
+
+
+/*
+ * parallax layers
+ *
+ ****************************************************************************/
+
+
+/*
+ * background parallax (skyline)
+ *
+ ********************************************************/
+
+#bg-1 { background-image: url( '../images/bg-background@2x.png' ); background-size: 7389px 667px; }
+
+
+/*
+ * midground parallax (buildings)
+ *
+ ********************************************************/
+
+// specific background tiles
+.bg-mid-tile-1	 { left: 0; background: url( '../images/bg-mid-1.png' ); }
+.bg-mid-tile-2	 { left: 821px; background: url( '../images/bg-mid-2.png' ); }
+.bg-mid-tile-3	 { left: 1642px; background: url( '../images/bg-mid-3.png' ); }
+.bg-mid-tile-4	 { left: 2463px; background: url( '../images/bg-mid-4.png' ); }
+.bg-mid-tile-5	 { left: 3284px; background: url( '../images/bg-mid-5.png' ); }
+.bg-mid-tile-6	 { left: 4105px; background: url( '../images/bg-mid-6.png' ); }
+.bg-mid-tile-7	 { left: 4926px; background: url( '../images/bg-mid-7.png' ); }
+.bg-mid-tile-8	 { left: 5747px; background: url( '../images/bg-mid-8.png' ); }
+.bg-mid-tile-9	 { left: 6568px; background: url( '../images/bg-mid-9.png' ); }
+
+// TEMP flat elements in midground
+#bg-2-sub-elements {
+	background-image: url( '../images/TEMP-elements@2x.png' ); background-size: 7389px 700px;
+}
+
+
+/*
+ * snow elements
+ *
+ ****************************************************************************/
+
+// midground snow definition
+.snow-midground {
+	background-image: url('../images/bkg-snow-midground');
+}
+
+// midground snow definition
+.snow-foreground {
+	background-image: url('../images/bkg-snow-foreground');
+}
+
+/*
+ * foreground parallax (street level)
+ *
+ ********************************************************/
+
+
+/*
+ * content region definitions
+ *
+ ****************************************************************************/
+
+.panel-content { background-image: url( '../images/bkg-panel@2x.png' ); background-size: 281px 800px; }
+
+
+/*
+ * cloud regions
+ *
+ ****************************************************************************/
+
+// individual default cloud
+.cloud { background-image: url( '../images/sprite-clouds@2x.png' ); background-size: 281px 800px; }
+
+
+/*
+ * individual people elements
+ *
+ ****************************************************************************/
+
+// individual default person
+.person { background-image: url( '../images/sprite-people@2x.png' ); background-size: 1303px 120px; }
+
+
+/*
+ * fact elements
+ *
+ ****************************************************************************/
+

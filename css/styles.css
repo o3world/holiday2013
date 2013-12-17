@@ -474,12 +474,12 @@ a {
  ****************************************************************************/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000383}}
 #touch-control {
-  z-index: 500;
+  z-index: 200;
   position: fixed;
   opacity: 1;
   width: 100%;
   height: 100%;
-  background: url("../images/touch-divider.gif") repeat-y 50% 0; }
+  background: rgba(255, 255, 255, 0.5) url("../images/touch-divider.gif") repeat-y 50% 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000388}}
 .touch-hint {
@@ -487,13 +487,13 @@ a {
   bottom: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 200px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #cc0000;
   text-align: center;
   line-height: 50px;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #cc0000; }
+  color: #fff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000392}}
 #scLeft, #scRight {
@@ -503,8 +503,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 2000;
-  background-color: rgba(255, 0, 0, 0.2); }
+  z-index: 2000; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\0000394}}
 #scLeft {
@@ -530,14 +529,14 @@ a {
   float: left;
   margin-right: -20px;
   margin-left: 20px;
-  border-right: 7px solid #cc0000; }
+  border-right: 7px solid #fff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003105}}
 .arrow-right {
   float: right;
   margin-right: 20px;
   margin-left: -20px;
-  border-left: 7px solid #cc0000; }
+  border-left: 7px solid #fff; }
 
 /*
  * social icons
@@ -813,7 +812,7 @@ a {
   box-sizing: border-box;
   left: 122px;
   width: 281px;
-  height: 600px;
+  height: 800px;
   background: url("../images/bkg-panel.png") no-repeat 0 0;
   text-align: center; }
 
@@ -878,7 +877,7 @@ a {
  ****************************************************************************/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_base\.scss}line{font-family:\00003299}}
 .person {
-  z-index: 60;
+  z-index: 300;
   position: absolute;
   display: block;
   height: 120px;
@@ -1220,4 +1219,152 @@ a {
   /*
    * retina CSS
    *
-   ************************************************************************************************/ }
+   ************************************************************************************************/
+  /*
+   * preloader
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000312}}
+  .preloader {
+    background: url("../images/bkg-preload.png") no-repeat 0 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000316}}
+  .preloader-animation {
+    background: url("../images/preload-animation.gif") no-repeat 0 0; }
+
+  /*
+   * touch control hint
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000324}}
+  #touch-control {
+    background-image: url("../images/touch-divider@2x.gif");
+    background-size: 3px 21px; }
+
+  /*
+   * social icons
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000335}}
+  .social-item {
+    background-image: url("../images/sprite-social@2x.png");
+    background-size: 117px 120px; }
+
+  /*
+   * base parallax definitions
+   *
+   ****************************************************************************/
+  /*
+   * parallax layers
+   *
+   ****************************************************************************/
+  /*
+   * background parallax (skyline)
+   *
+   ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000357}}
+  #bg-1 {
+    background-image: url("../images/bg-background@2x.png");
+    background-size: 7389px 667px; }
+
+  /*
+   * midground parallax (buildings)
+   *
+   ********************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000366}}
+  .bg-mid-tile-1 {
+    left: 0;
+    background: url("../images/bg-mid-1.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000367}}
+  .bg-mid-tile-2 {
+    left: 821px;
+    background: url("../images/bg-mid-2.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000368}}
+  .bg-mid-tile-3 {
+    left: 1642px;
+    background: url("../images/bg-mid-3.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000369}}
+  .bg-mid-tile-4 {
+    left: 2463px;
+    background: url("../images/bg-mid-4.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000370}}
+  .bg-mid-tile-5 {
+    left: 3284px;
+    background: url("../images/bg-mid-5.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000371}}
+  .bg-mid-tile-6 {
+    left: 4105px;
+    background: url("../images/bg-mid-6.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000372}}
+  .bg-mid-tile-7 {
+    left: 4926px;
+    background: url("../images/bg-mid-7.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000373}}
+  .bg-mid-tile-8 {
+    left: 5747px;
+    background: url("../images/bg-mid-8.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000374}}
+  .bg-mid-tile-9 {
+    left: 6568px;
+    background: url("../images/bg-mid-9.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000377}}
+  #bg-2-sub-elements {
+    background-image: url("../images/TEMP-elements@2x.png");
+    background-size: 7389px 700px; }
+
+  /*
+   * snow elements
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000388}}
+  .snow-midground {
+    background-image: url("../images/bkg-snow-midground"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000393}}
+  .snow-foreground {
+    background-image: url("../images/bkg-snow-foreground"); }
+
+  /*
+   * foreground parallax (street level)
+   *
+   ********************************************************/
+  /*
+   * content region definitions
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\00003108}}
+  .panel-content {
+    background-image: url("../images/bkg-panel@2x.png");
+    background-size: 281px 800px; }
+
+  /*
+   * cloud regions
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\00003117}}
+  .cloud {
+    background-image: url("../images/sprite-clouds@2x.png");
+    background-size: 281px 800px; }
+
+  /*
+   * individual people elements
+   *
+   ****************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\00003126}}
+  .person {
+    background-image: url("../images/sprite-people@2x.png");
+    background-size: 1303px 120px; }
+
+  /*
+   * fact elements
+   *
+   ****************************************************************************/ }

@@ -68,16 +68,6 @@
 		    </div>
 		</div>
 		
-		<!-- tablet control hints -->
-		<div id="touch-control" class="parallax-layer">
-			<div id="scLeft">
-				<div class="touch-hint touch-hint-left"><span class="direction-arrow arrow-left" aria-hidden="true" role="presentation"></span>Touch to Slide Left</div>
-			</div>
-			<div id="scRight">
-				<div class="touch-hint touch-hint-right"><span class="direction-arrow arrow-right" aria-hidden="true" role="presentation"></span>Touch to Slide Right</div>
-			</div>
-		</div>
-		
 		<!-- scrolling display -->
 		<div id="skrollr-body">
 			<div id="scene">
@@ -317,6 +307,16 @@
 					</div>
 				</div>
 				
+				<!-- tablet control hints -->
+				<div id="touch-control" class="parallax-layer" data-30="opacity:1;" data-130="opacity:0;">
+					<div id="scLeft">
+						<div class="touch-hint touch-hint-left"><span class="direction-arrow arrow-left" aria-hidden="true" role="presentation"></span>Touch to Slide Left</div>
+					</div>
+					<div id="scRight">
+						<div class="touch-hint touch-hint-right"><span class="direction-arrow arrow-right" aria-hidden="true" role="presentation"></span>Touch to Slide Right</div>
+					</div>
+				</div>
+				
 				<!-- panel content -->
 				<div id="bg-panels" class="parallax-layer" data-0="left:0px;">
 				
@@ -359,7 +359,6 @@
 		<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
 		
 		<!-- load JS functionality -->
-		<script type="text/javascript" src="js/iscroll.js"></script>
 		<script type="text/javascript" src="js/skrollr.min.js"></script>
 		<script type="text/javascript" src="js/preloadjs-0.4.0.min.js"></script>
 		<script type="text/javascript" src="js/funcs.js"></script>

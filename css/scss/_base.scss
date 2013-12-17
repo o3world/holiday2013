@@ -81,15 +81,15 @@ a {
  ****************************************************************************/
 
 #touch-control {
-	z-index: 500; position: fixed; opacity: 1; width: 100%; height: 100%; background: url( '../images/touch-divider.gif' ) repeat-y 50% 0;
+	z-index: 200; position: fixed; opacity: 1; width: 100%; height: 100%; background: rgba( #fff, .5 ) url( '../images/touch-divider.gif' ) repeat-y 50% 0;
 }
 
 // default touch tip
 .touch-hint {
-	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 200px; background-color: rgba( #fff, .8 ); text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: $c-brand;
+	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 200px; background-color: $c-brand; text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: #fff;
 }
 
-#scLeft, #scRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; background-color: rgba( #f00, .2 ); }
+#scLeft, #scRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; }
 
 #scLeft { left: 0; }
 
@@ -101,8 +101,8 @@ a {
 .direction-arrow { display: block; margin-top: 18px; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
 
 // unique directional arrows
-.arrow-left { float: left; margin-right: -20px; margin-left: 20px; border-right: 7px solid $c-brand; }
-.arrow-right { float: right; margin-right: 20px; margin-left: -20px; border-left: 7px solid $c-brand; }
+.arrow-left { float: left; margin-right: -20px; margin-left: 20px; border-right: 7px solid #fff; }
+.arrow-right { float: right; margin-right: 20px; margin-left: -20px; border-left: 7px solid #fff; }
 
 
 /*
@@ -252,7 +252,7 @@ a {
 
 #bg-panels { z-index: 40; height: 100%; }
 
-.panel-content { position: absolute; bottom: 330px; @include box-sizing( ); left: 122px; width: 281px; height: 600px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
+.panel-content { position: absolute; bottom: 330px; @include box-sizing( ); left: 122px; width: 281px; height: 800px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
 
 // intro and outro content container
 .content-inner { position: absolute; bottom: 0; width: 100%; height: 235px; }
@@ -296,7 +296,7 @@ a {
  ****************************************************************************/
 
 // individual default person
-.person { z-index: 60; position: absolute; display: block; height: 120px; background: url( '../images/sprite-people.png' ); text-indent: -9999px; }
+.person { z-index: 300; position: absolute; display: block; height: 120px; background: url( '../images/sprite-people.png' ); text-indent: -9999px; }
 
 // unique people
 #person-andrew 	{ bottom: -10px; left: 1065px; width: 82px; background-position: -651px 0; }
