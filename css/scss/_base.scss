@@ -63,7 +63,7 @@ a {
 }
 
 .preloader {
-	position: absolute; bottom: 50%; left: 50%; margin-bottom: -100px; margin-left: -85px; width: 171px; height: 585px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+	position: absolute; bottom: 50%; left: 50%; margin-bottom: -100px; margin-left: -85px; width: 171px; height: 800px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
 }
 
 .preloader-content {
@@ -89,9 +89,9 @@ a {
 	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 200px; background-color: $c-brand; text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: #fff;
 }
 
-#scLeft, #scRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; }
+#scrollLeft, #scrollRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; }
 
-#scLeft { left: 0; }
+#scrollLeft { left: 0; }
 
 // specific touch hints
 .touch-hint-left { left: 50px; }
@@ -153,7 +153,21 @@ a {
  *
  ********************************************************/
 
-#bg-1 { bottom: 0; width: 7390px; background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; }
+#bg-1 { bottom: 0; width: 7390px; /* background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; */ }
+
+// generic background tile
+.bg-back-tile { position: absolute; bottom: 0; width: 821px; height: 700px; }
+
+// specific background tiles
+.bg-back-tile-1	 { left: 0; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-2	 { left: 821px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-3	 { left: 1642px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-4	 { left: 2463px; background: url( '../images/bg-back-4.png' ); }
+.bg-back-tile-5	 { left: 3284px; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-6	 { left: 4105px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-7	 { left: 4926px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-8	 { left: 5747px; background: url( '../images/bg-back-4.png' ); }
+.bg-back-tile-9	 { left: 6568px; background: url( '../images/bg-back-1.png' ); }
 
 
 /*
@@ -250,7 +264,7 @@ a {
  *
  ****************************************************************************/
 
-#bg-panels { z-index: 40; height: 100%; }
+#bg-panels { z-index: 40; width: 7390px; height: 100%; }
 
 .panel-content { position: absolute; bottom: 330px; @include box-sizing( ); left: 122px; width: 281px; height: 800px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
 
@@ -363,4 +377,3 @@ a {
 #f-23 	{ left: 6170px; bottom: 250px; width: 240px; }
 #f-24 	{ left: 6384px; bottom: 135px; width: 240px; }
 #f-25 	{ left: 6625px; bottom: 172px; width: 300px; }
-

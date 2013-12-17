@@ -32,11 +32,50 @@ M = M ? [M[1], M[2]] : [N, navigator.appVersion, '-?'];
 console.log('Browser: ' + M[0] + " " + M[1]);
 
 
+// function assigned to var for minimizing resize event calls - StackOverflow
+var waitForFinalEvent = ( function( ) {
+
+	var timers = { };
+	
+	return function( callback, ms, uniqueId ) {
+		if( !uniqueId ) {
+			uniqueId = "Don't call this twice without a uniqueId";
+		}
+		if( timers[ uniqueId ] ) {
+			clearTimeout( timers[ uniqueId ] );
+		}
+		timers[ uniqueId ] = setTimeout( callback, ms );
+	};
+} ) ( );
+
+
 /*
  * Global Variables
  *
  ************************************************************************************************/
 
+
+// define preloader varaibles
+var preload;
+var loadallfired = false;
+var manifest = new Array( );
+
+// conditional var for determining load of default or retina assets
+if( window.devicePixelRatio >= 1.5 ) {
+	
+	// set retina image list
+	var theImages = [ "images/bg-background.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/TEMP-elements.png", "images/touch-divider.gif" ];
+} else {
+
+	// set default image list
+	var theImages = [ "images/bg-background.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/TEMP-elements.png", "images/touch-divider.gif" ];
+}
+
+// define skrollr var
+var s;
+
+// define interval for touch/mousedown scrolling
+var scrollInterval = 100;
 
 
 /*
@@ -45,60 +84,63 @@ console.log('Browser: ' + M[0] + " " + M[1]);
  ************************************************************************************************/
 
 
-var pm1 = jQuery( '#bg-1' );
-
-jQuery( pm1 ).attr( 'data-' + ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ) / 2 ) + 'px' );
-
-var pm2 = jQuery( '#bg-2, #bg-panels' );
-
-jQuery( pm2 ).attr( 'data-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
-
-
-var preload;
-var loadallfired = false;
-var manifest = new Array();
-var wdImgs = [ "images/bg-background.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png" ];
-
+// function to initialize preloader
 function initPreloader( ) {
-    
-    reload( );
-    loadAll( );
+
+	// call preload init
+	reload( );
+	
+	// start asset loading
+	loadAll( );
 };
 
+// function for for creating preloader instance and assigning listerners
 function reload( ) {
     
+    // kill existing preloader
     if( preload != null ) {
         preload.close( );
     }
     
+    // define preloader
     preload = new createjs.LoadQueue( false );
     preload.addEventListener( 'error', handleFileError );
     preload.addEventListener( 'progress', handleOverallProgress );
     preload.setMaxConnections( 5 );
     
-    manifest = wdImgs;
+    // assign asset queue for loading
+    manifest = theImages;
 };
 
-
+// function to kick off asset loading
 function loadAll( ) {
     
+    // load new asset while there are more to load
     while( manifest.length > 0 ) {
         loadAnother( );
     }
 };
 
+// function for loading next asset in array
 function loadAnother( ) {
+    
     console.log( "here loadAnother" );
+    
+    // cycle forward in asset array
     var item = manifest.shift( );
     
+    // load new item
     preload.loadFile( item );
 }
 
+// function defining load progress handler
 function handleOverallProgress( event ) {
 	
+	// when load is complete
 	if( preload.progress == 1 ) {
 		
-		var s = skrollr.init( {
+		// set-up skrollr instance
+		s = skrollr.init( {
 			forceHeight: true,
 			smoothScrolling: true,
 			easing: {
@@ -110,70 +152,89 @@ function handleOverallProgress( event ) {
 				currST = 0;
 			}
 		} );
-				
+		
+		// fadeout the preloader
 		setTimeout( function( ) {
 			jQuery( '#preload-container' ).fadeOut( 'slow' );
 		}, 500 );
 	}
 };
 
+
+// function to display load error in console
 function handleFileError( event ) {
     console.log( 'error loading asset' );
 };
 
 
 
-
-
-
-var scrollInterval/* , scrollDistance, scrollSpeed */ = 100; //touch controls
-
 function moveScene( direction ) {
 	
 	scrollInterval = setInterval( function( ) {
-		
-		//scrollPos = -( currST + ( direction * 100 ) )
-		
+
 		jQuery( window ).scrollTop( jQuery( window ).scrollTop( ) + -( direction * 100 ) );
-		
-		//jQuery( window ).scrollTo( 0, '+=100px' );
-		
-		//currST = scrollPos;
-		
-		//console.log( "currST: " + currST );
-		
-		/*
-scrollPos = -( currST + ( direction * 100 ) )
-		
-		myScroll.scrollTo( 0, scrollPos );
-		
-		skrollr.iscroll.scrollTo( 0, -( jQuery( window ).scrollTop( ) + ( direction * scrollDistance ) ), scrollSpeed );
-				
-		console.log( -( jQuery( window ).scrollTop( ) + ( direction * 100 ) ) );
-*/
 	}, 100 );
 };
-
-jQuery( '#scRight' ).bind( 'touchstart mousedown', function( ){
-	clearInterval( scrollInterval );
-	moveScene( -1 );
-} );
-jQuery( '#scRight' ).bind( 'touchend mouseup', function( ) {
-	clearInterval( scrollInterval );
-} );
-jQuery( '#scLeft' ).bind( 'touchstart mousedown', function( ) {
-	clearInterval( scrollInterval );
-	moveScene( 1 );
-} );
-jQuery( '#scLeft' ).bind( 'touchend mouseup', function( ) {
-	clearInterval( scrollInterval );
-} );
 
 
 /*
  * jQuery Actions
  *
  ************************************************************************************************/
+
+
+// variable for background container
+var pm1 = jQuery( '#bg-1' );
+
+// assign data and parallax math on page load for background
+jQuery( pm1 ).attr( 'data-' + ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ) / 2 ) + 'px' );
+
+// varaible for midground container
+var pm2 = jQuery( '#bg-2, #bg-panels' );
+
+// assign data and parallax math on page load for midground
+jQuery( pm2 ).attr( 'data-0', 'right:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
+jQuery( pm2 ).attr( 'data-6600', 'right:0px' );
+
+
+// define scroll actions for touch/mousedown interactions
+jQuery( '#scrollRight' ).bind( 'touchstart mousedown', function( ) {
+	clearInterval( scrollInterval );
+	moveScene( -1 );
+} );
+
+jQuery( '#scrollRight' ).bind( 'touchend mouseup', function( ) {
+	clearInterval( scrollInterval );
+} );
+
+jQuery( '#scrollLeft' ).bind( 'touchstart mousedown', function( ) {
+	clearInterval( scrollInterval );
+	moveScene( 1 );
+} );
+
+jQuery( '#scrollLeft' ).bind( 'touchend mouseup', function( ) {
+	clearInterval( scrollInterval );
+} );
+
+
+/*
+ * jQuery Window Resize
+ *
+ ************************************************************************************************/
+
+
+jQuery( window ).resize( function( ) {
+	
+	// recalculate parallax layer positions on resize
+	waitForFinalEvent( function( ) {
+		
+		// reset parallax data attrs
+		jQuery( pm2 ).attr( 'data-0', 'right:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
+		
+		// refresh skrollr math
+		s.refresh( );
+	}, 500, "some unique string" );
+} );
 
 
 
@@ -185,6 +246,6 @@ jQuery( '#scLeft' ).bind( 'touchend mouseup', function( ) {
 
 jQuery( document ).ready( function( ) {
 	
-	// preload content
+	// preload image assets; init site
 	initPreloader( );
 } );
