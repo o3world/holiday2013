@@ -1318,47 +1318,47 @@ a {
   /* #bg-1 { background-image: url( '../images/bg-background@2x.png' ); background-size: 7389px 700px; } */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000360}}
   .bg-back-tile-1 {
-    background-image: url("../images/bg-back-1.png");
+    background-image: url("../images/bg-back-1@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000361}}
   .bg-back-tile-2 {
-    background-image: url("../images/bg-back-2.png");
+    background-image: url("../images/bg-back-2@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000362}}
   .bg-back-tile-3 {
-    background-image: url("../images/bg-back-3.png");
+    background-image: url("../images/bg-back-3@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000363}}
   .bg-back-tile-4 {
-    background-image: url("../images/bg-back-4.png");
+    background-image: url("../images/bg-back-4@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000364}}
   .bg-back-tile-5 {
-    background-image: url("../images/bg-back-1.png");
+    background-image: url("../images/bg-back-1@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000365}}
   .bg-back-tile-6 {
-    background-image: url("../images/bg-back-2.png");
+    background-image: url("../images/bg-back-2@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000366}}
   .bg-back-tile-7 {
-    background-image: url("../images/bg-back-3.png");
+    background-image: url("../images/bg-back-3@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000367}}
   .bg-back-tile-8 {
-    background-image: url("../images/bg-back-4.png");
+    background-image: url("../images/bg-back-4@2x.png");
     background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000368}}
   .bg-back-tile-9 {
-    background-image: url("../images/bg-back-1.png");
+    background-image: url("../images/bg-back-1@2x.png");
     background-size: 821px 700px; }
 
   /*
