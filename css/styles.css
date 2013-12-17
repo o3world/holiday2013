@@ -1226,11 +1226,13 @@ a {
    ****************************************************************************/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000312}}
   .preloader {
-    background: url("../images/bkg-preload.png") no-repeat 0 0; }
+    background-image: url("../images/bkg-preload@2x.png");
+    background-size: 171px 800px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000316}}
   .preloader-animation {
-    background: url("../images/preload-animation.gif") no-repeat 0 0; }
+    background-image: url("../images/preload-animation@2x.gif");
+    background-size: 96px 96px; }
 
   /*
    * touch control hint
@@ -1273,48 +1275,48 @@ a {
    ********************************************************/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000366}}
   .bg-mid-tile-1 {
-    left: 0;
-    background: url("../images/bg-mid-1.png"); }
+    background: url("../images/bg-mid-1@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000367}}
   .bg-mid-tile-2 {
-    left: 821px;
-    background: url("../images/bg-mid-2.png"); }
+    background: url("../images/bg-mid-2@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000368}}
   .bg-mid-tile-3 {
-    left: 1642px;
-    background: url("../images/bg-mid-3.png"); }
+    background: url("../images/bg-mid-3@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000369}}
   .bg-mid-tile-4 {
-    left: 2463px;
-    background: url("../images/bg-mid-4.png"); }
+    background: url("../images/bg-mid-4@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000370}}
   .bg-mid-tile-5 {
-    left: 3284px;
-    background: url("../images/bg-mid-5.png"); }
+    background: url("../images/bg-mid-5@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000371}}
   .bg-mid-tile-6 {
-    left: 4105px;
-    background: url("../images/bg-mid-6.png"); }
+    background: url("../images/bg-mid-6@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000372}}
   .bg-mid-tile-7 {
-    left: 4926px;
-    background: url("../images/bg-mid-7.png"); }
+    background: url("../images/bg-mid-7@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000373}}
   .bg-mid-tile-8 {
-    left: 5747px;
-    background: url("../images/bg-mid-8.png"); }
+    background: url("../images/bg-mid-8@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000374}}
   .bg-mid-tile-9 {
-    left: 6568px;
-    background: url("../images/bg-mid-9.png"); }
+    background: url("../images/bg-mid-9@2x.png");
+    background-size: 821px 700px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\0000377}}
   #bg-2-sub-elements {
@@ -1353,7 +1355,7 @@ a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_retina\.scss}line{font-family:\00003117}}
   .cloud {
     background-image: url("../images/sprite-clouds@2x.png");
-    background-size: 281px 800px; }
+    background-size: 7389px 700px; }
 
   /*
    * individual people elements

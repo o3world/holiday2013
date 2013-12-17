@@ -10,10 +10,10 @@
  ****************************************************************************/
 
 .preloader {
-	background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+	background-image: url( '../images/bkg-preload@2x.png' ); background-size: 171px 800px;
 }
 
-.preloader-animation { background: url( '../images/preload-animation.gif' ) no-repeat 0 0; }
+.preloader-animation { background-image: url( '../images/preload-animation@2x.gif' ); background-size: 96px 96px; }
 
 
 /*
@@ -63,15 +63,15 @@
  ********************************************************/
 
 // specific background tiles
-.bg-mid-tile-1	 { left: 0; background: url( '../images/bg-mid-1.png' ); }
-.bg-mid-tile-2	 { left: 821px; background: url( '../images/bg-mid-2.png' ); }
-.bg-mid-tile-3	 { left: 1642px; background: url( '../images/bg-mid-3.png' ); }
-.bg-mid-tile-4	 { left: 2463px; background: url( '../images/bg-mid-4.png' ); }
-.bg-mid-tile-5	 { left: 3284px; background: url( '../images/bg-mid-5.png' ); }
-.bg-mid-tile-6	 { left: 4105px; background: url( '../images/bg-mid-6.png' ); }
-.bg-mid-tile-7	 { left: 4926px; background: url( '../images/bg-mid-7.png' ); }
-.bg-mid-tile-8	 { left: 5747px; background: url( '../images/bg-mid-8.png' ); }
-.bg-mid-tile-9	 { left: 6568px; background: url( '../images/bg-mid-9.png' ); }
+.bg-mid-tile-1	 { background: url( '../images/bg-mid-1@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-2	 { background: url( '../images/bg-mid-2@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-3	 { background: url( '../images/bg-mid-3@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-4	 { background: url( '../images/bg-mid-4@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-5	 { background: url( '../images/bg-mid-5@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-6	 { background: url( '../images/bg-mid-6@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-7	 { background: url( '../images/bg-mid-7@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-8	 { background: url( '../images/bg-mid-8@2x.png' ); background-size: 821px 700px; }
+.bg-mid-tile-9	 { background: url( '../images/bg-mid-9@2x.png' ); background-size: 821px 700px; }
 
 // TEMP flat elements in midground
 #bg-2-sub-elements {
@@ -114,7 +114,7 @@
  ****************************************************************************/
 
 // individual default cloud
-.cloud { background-image: url( '../images/sprite-clouds@2x.png' ); background-size: 281px 800px; }
+.cloud { background-image: url( '../images/sprite-clouds@2x.png' ); background-size: 7389px 700px; }
 
 
 /*
