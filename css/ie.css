@@ -726,7 +726,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url("../images/bkg-snow-midground");
+  background-image: url("../images/bkg-snow-midground.png");
   -webkit-animation: snow-midground 20s linear infinite;
   -moz-animation: snow-midground 20s linear infinite;
   -ms-animation: snow-midground 20s linear infinite;
@@ -765,7 +765,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url("../images/bkg-snow-foreground");
+  background-image: url("../images/bkg-snow-foreground.png");
   -webkit-animation: snow-foreground 20s linear infinite;
   -moz-animation: snow-foreground 20s linear infinite;
   -ms-animation: snow-foreground 20s linear infinite;

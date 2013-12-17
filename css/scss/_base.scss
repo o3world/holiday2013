@@ -208,7 +208,7 @@ a {
 
 // midground snow definition
 .snow-midground {
-	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-midground'); @include animation( snow-midground, 20s, linear, infinite );
+	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-midground.png'); @include animation( snow-midground, 20s, linear, infinite );
 }
 
 // foreground snowfall animation
@@ -231,7 +231,7 @@ a {
 
 // midground snow definition
 .snow-foreground {
-	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-foreground'); @include animation( snow-foreground, 20s, linear, infinite );
+	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-foreground.png'); @include animation( snow-foreground, 20s, linear, infinite );
 }
 
 /*
