@@ -86,7 +86,7 @@ a {
 
 // default touch tip
 .touch-hint {
-	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 200px; background-color: $c-brand; text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: #fff;
+	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 230px; background-color: $c-brand; text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: #fff;
 }
 
 #scrollLeft, #scrollRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; }
@@ -98,11 +98,11 @@ a {
 .touch-hint-right { right: 50px; }
 
 // base directional arrow
-.direction-arrow { display: block; margin-top: 18px; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+.direction-arrow { @include inline-block( ); margin-top: 18px; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
 
 // unique directional arrows
-.arrow-left { float: left; margin-right: -20px; margin-left: 20px; border-right: 7px solid #fff; }
-.arrow-right { float: right; margin-right: 20px; margin-left: -20px; border-left: 7px solid #fff; }
+.arrow-left { margin-right: 10px; border-right: 7px solid #fff; }
+.arrow-right { margin-left: 10px; border-left: 7px solid #fff; }
 
 
 /*
@@ -153,7 +153,7 @@ a {
  *
  ********************************************************/
 
-#bg-1 { bottom: 0; width: 7390px; /* background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; */ }
+#bg-1 { bottom: 0; width: 9912px; /* background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; */ }
 
 // generic background tile
 .bg-back-tile { position: absolute; bottom: 0; width: 821px; height: 700px; }
@@ -168,6 +168,9 @@ a {
 .bg-back-tile-7	 { left: 4926px; background: url( '../images/bg-back-3.png' ); }
 .bg-back-tile-8	 { left: 5747px; background: url( '../images/bg-back-4.png' ); }
 .bg-back-tile-9	 { left: 6568px; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-10 { left: 7419px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-11 { left: 8240px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-12 { left: 9091px; background: url( '../images/bg-back-4.png' ); }
 
 
 /*
@@ -191,10 +194,25 @@ a {
 .bg-mid-tile-8	 { left: 5747px; background: url( '../images/bg-mid-8.png' ); }
 .bg-mid-tile-9	 { left: 6568px; background: url( '../images/bg-mid-9.png' ); }
 
-// TEMP flat elements in midground
-#bg-2-sub-elements {
-	z-index: 40; position: absolute; bottom: 0; width: 7390px; height: 700px; background: url( '../images/TEMP-elements.png' ) no-repeat 0 0;
-}
+
+/*
+ * foreground elements (vehicles)
+ *
+ ********************************************************/
+
+#bg-2-sub-elements { z-index: 40; position: absolute; bottom: 0; width: 7390px; height: 700px; }
+
+// generic background tile
+.bg-fore-elem { position: absolute; }
+
+// specific foreground elements
+.bg-fore-elem-1	{ bottom: 23px; left: 615px; width: 387px; height: 111px; background: url( '../images/midground-elem-1.png' ) no-repeat 0 0; }
+.bg-fore-elem-2	{ bottom: 555px; left: 1212px; width: 433px; height: 91px; background: url( '../images/midground-elem-2.png' ) no-repeat 0 0; }
+.bg-fore-elem-3	{ bottom: 20px; left: 2886px; width: 234px; height: 286px; background: url( '../images/midground-elem-3.png' ) no-repeat 0 0; }
+.bg-fore-elem-4	{ bottom: 388px; left: 3128px; width: 128px; height: 207px; background: url( '../images/midground-elem-4.png' ) no-repeat 0 0; }
+.bg-fore-elem-5	{ bottom: 10px; left: 4395px; width: 218px; height: 103px; background: url( '../images/midground-elem-5.png' ) no-repeat 0 0; }
+.bg-fore-elem-6	{ bottom: 44px; left: 4880px; width: 254px; height: 75px; background: url( '../images/midground-elem-6.png' ) no-repeat 0 0; }
+.bg-fore-elem-7	{ bottom: 20px; left: 6438px; width: 222px; height: 104px; background: url( '../images/midground-elem-7.png' ) no-repeat 0 0; }
 
 
 /*
@@ -266,7 +284,7 @@ a {
 
 #bg-panels { z-index: 40; width: 7390px; height: 100%; }
 
-.panel-content { position: absolute; bottom: 330px; @include box-sizing( ); left: 122px; width: 281px; height: 800px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
+.panel-content { position: absolute; @include box-sizing( ); left: 122px; width: 281px; height: 800px; background: url( '../images/bkg-panel.png' ) no-repeat 0 0; text-align: center; }
 
 // intro and outro content container
 .content-inner { position: absolute; bottom: 0; width: 100%; height: 235px; }
@@ -281,14 +299,14 @@ a {
 
 // intro container
 #intro-content {
-	left: 122px;
+	bottom: 330px; left: 122px;
 	
 	// compensate for ribbon edge
 	.ribbon-3 { margin-left: 20px; }
 }
 
 // outro container
-#outro-content { left: 7030px; }
+#outro-content { bottom: 270px; left: 7030px; }
 
 
 /*

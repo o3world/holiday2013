@@ -84,10 +84,20 @@
 .bg-mid-tile-8	 { background-image: url( '../images/bg-mid-8@2x.png' ); background-size: 821px 700px; }
 .bg-mid-tile-9	 { background-image: url( '../images/bg-mid-9@2x.png' ); background-size: 821px 700px; }
 
-// TEMP flat elements in midground
-#bg-2-sub-elements {
-	background-image: url( '../images/TEMP-elements@2x.png' ); background-size: 7389px 700px;
-}
+
+/*
+ * foreground elements (vehicles)
+ *
+ ********************************************************/
+
+// specific foreground elements
+.bg-fore-elem-1	{ background-image: url( '../images/midground-elem-1@2x.png' ); background-size: 387px 111px; }
+.bg-fore-elem-2	{ background-image: url( '../images/midground-elem-2@2x.png' ); background-size: 433px 91px; }
+.bg-fore-elem-3	{ background-image: url( '../images/midground-elem-3@2x.png' ); background-size: 234px 286px; }
+.bg-fore-elem-4	{ background-image: url( '../images/midground-elem-4@2x.png' ); background-size: 128px 207px; }
+.bg-fore-elem-5	{ background-image: url( '../images/midground-elem-5@2x.png' ); background-size: 218px 103px; }
+.bg-fore-elem-6	{ background-image: url( '../images/midground-elem-6@2x.png' ); background-size: 254px 75px; }
+.bg-fore-elem-7	{ background-image: url( '../images/midground-elem-7@2x.png' ); background-size: 222px 104px; }
 
 
 /*

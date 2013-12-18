@@ -64,15 +64,19 @@ var manifest = new Array( );
 if( window.devicePixelRatio >= 1.5 ) {
 	
 	// set retina image list
-	var theImages = [ "images/bg-background.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/TEMP-elements.png", "images/touch-divider.gif" ];
+	var theImages = [ "images/bg-back-1.png", "images/bg-back-2.png", "images/bg-back-3.png", "images/bg-back-4.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/midground-elem-1.png", "images/midground-elem-2.png", "images/midground-elem-3.png", "images/midground-elem-4.png", "images/midground-elem-5.png", "images/midground-elem-6.png", "images/midground-elem-7.png", "images/touch-divider.gif" ];
 } else {
 
 	// set default image list
-	var theImages = [ "images/bg-background.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/TEMP-elements.png", "images/touch-divider.gif" ];
+	var theImages = [ "images/bg-back-1.png", "images/bg-back-2.png", "images/bg-back-3.png", "images/bg-back-4.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/midground-elem-1.png", "images/midground-elem-2.png", "images/midground-elem-3.png", "images/midground-elem-4.png", "images/midground-elem-5.png", "images/midground-elem-6.png", "images/midground-elem-7.png", "images/touch-divider.gif" ];
 }
 
 // define skrollr var
 var s;
+
+// define parallax element vars
+var parallaxBG = jQuery( '#bg-1' ); // background
+var parallaxMG = jQuery( '#bg-2, #bg-panels' ); // midground; panels
 
 // define interval for touch/mousedown scrolling
 var scrollInterval = 100;
@@ -167,12 +171,23 @@ function handleFileError( event ) {
 };
 
 
+// function to recalculate parallax data attributes
+function calculateParallaxData( ) {
 
+	jQuery( parallaxBG ).attr( 'data-0', 'right:-' + ( jQuery( parallaxBG ).width( ) - jQuery( window ).width( ) ) / 3 + 'px;' );
+	
+	jQuery( parallaxMG ).attr( 'data-0', 'right:-' + ( jQuery( parallaxMG ).width( ) - jQuery( window ).width( ) ) + 'px;' );
+};
+
+
+// function to move scene proper direction
 function moveScene( direction ) {
 	
+	// define scroll interval function
 	scrollInterval = setInterval( function( ) {
-
-		jQuery( window ).scrollTop( jQuery( window ).scrollTop( ) + -( direction * 100 ) );
+		
+		// set new scrollTop position 
+		jQuery( window ).scrollTop( jQuery( window ).scrollTop( ) + -( direction * 50 ) );
 	}, 100 );
 };
 
@@ -181,20 +196,6 @@ function moveScene( direction ) {
  * jQuery Actions
  *
  ************************************************************************************************/
-
-
-// variable for background container
-var pm1 = jQuery( '#bg-1' );
-
-// assign data and parallax math on page load for background
-jQuery( pm1 ).attr( 'data-' + ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ), 'left:-' + ( ( jQuery( pm1 ).width( ) - jQuery( window ).width( ) ) / 2 ) + 'px' );
-
-// varaible for midground container
-var pm2 = jQuery( '#bg-2, #bg-panels' );
-
-// assign data and parallax math on page load for midground
-jQuery( pm2 ).attr( 'data-0', 'right:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
-jQuery( pm2 ).attr( 'data-6600', 'right:0px' );
 
 
 // define scroll actions for touch/mousedown interactions
@@ -228,8 +229,10 @@ jQuery( window ).resize( function( ) {
 	// recalculate parallax layer positions on resize
 	waitForFinalEvent( function( ) {
 		
-		// reset parallax data attrs
-		jQuery( pm2 ).attr( 'data-0', 'right:-' + ( jQuery( pm2 ).width( ) - jQuery( window ).width( ) ) + 'px' );
+		console.log( "bitches!" );
+		
+		// recalculate parallax data attributes
+		calculateParallaxData( );
 		
 		// refresh skrollr math
 		s.refresh( );
@@ -248,4 +251,26 @@ jQuery( document ).ready( function( ) {
 	
 	// preload image assets; init site
 	initPreloader( );
+	
+	
+	// define static parallax data element
+	jQuery( parallaxBG ).attr( 'data-6600', 'right:0px;' );
+	jQuery( parallaxMG ).attr( 'data-6600', 'right:0px;' );
+	
+	// set initial parallax element data positions
+	calculateParallaxData( );
+	
+	
+	// modernizr test for touch device to determine screen text
+	if( Modernizr.touch ) {
+		
+		// is touch
+		jQuery( '.arrow-left' ).after( 'Touch to Move Left' );
+		jQuery( '.arrow-right' ).before( 'Touch to Move Right' );
+	} else {
+		
+		// not touch
+		jQuery( '.arrow-left' ).after( 'Click/Scroll to Move Left' );
+		jQuery( '.arrow-right' ).before( 'Click/Scroll to Move Right' );
+	}
 } );
