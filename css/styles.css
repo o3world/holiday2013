@@ -487,6 +487,7 @@ p, ul, ol, dd {
     z-index: 500;
     position: fixed;
     display: block;
+    background-color: #d0e8f5;
     background: -webkit-linear-gradient(top, #b4d1e1 0%, #d0e8f5 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(#b4d1e1), to(#d0e8f5)) 0 0;
     background: -moz-linear-gradient(top, #b4d1e1, #d0e8f5) 0 0;
