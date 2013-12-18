@@ -76,11 +76,11 @@ function deviceCheck( ) {
 						jQuery( '.arrow-right' ).before( 'Click/Scroll to Move Right' );
 						
 						// add snow animation and cloud parallax
-						jQuery( '#scene' ).prepend( '<div id="cloud-1" class="cloud cloud-1 parallax-layer" data-0="left:500px;" data-6600="left:0px;"></div>' );
-						jQuery( '#cloud-1' ).after( '<div class="snow-midground"></div>' );
+						jQuery( '.snow-midground' ).before( '<div id="cloud-1" class="cloud cloud-1 parallax-layer" data-0="left:500px;" data-6600="left:0px;"></div>' );						
+						jQuery( '.snow-foreground' ).before( '<div id="cloud-2" class="cloud cloud-2 parallax-layer" data-0="left:-500px;" data-6600="left:0px;"></div>' );
 						
-						jQuery( '#bg-1' ).after( '<div id="cloud-2" class="cloud cloud-2 parallax-layer" data-0="left:-500px;" data-6600="left:0px;"></div>' );
-						jQuery( '#cloud-2' ).after( '<div class="snow-foreground"></div>' );
+						jQuery( '.snow-midground' ).addClass( 'has-midground-animation' );
+						jQuery( '.snow-foreground' ).addClass( 'has-foreground-animation' );
 					}
 				} );
 			} );
