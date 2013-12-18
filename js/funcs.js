@@ -64,7 +64,7 @@ var manifest = new Array( );
 if( window.devicePixelRatio >= 1.5 ) {
 	
 	// set retina image list
-	var theImages = [ "images/bg-back-1.png", "images/bg-back-2.png", "images/bg-back-3.png", "images/bg-back-4.png", "images/bg-mid-1.png", "images/bg-mid-2.png", "images/bg-mid-3.png", "images/bg-mid-4.png", "images/bg-mid-5.png", "images/bg-mid-6.png", "images/bg-mid-7.png", "images/bg-mid-8.png", "images/bg-mid-9.png", "images/bkg-panel.png", "images/bkg-snow-foreground.png", "images/bkg-snow-midground.png", "images/sprite-clouds.png", "images/sprite-people.png", "images/sprite-social.png", "images/midground-elem-1.png", "images/midground-elem-2.png", "images/midground-elem-3.png", "images/midground-elem-4.png", "images/midground-elem-5.png", "images/midground-elem-6.png", "images/midground-elem-7.png", "images/touch-divider.gif" ];
+	var theImages = [ "images/bg-back-1@2x.png", "images/bg-back-2@2x.png", "images/bg-back-3@2x.png", "images/bg-back-4@2x.png", "images/bg-mid-1@2x.png", "images/bg-mid-2@2x.png", "images/bg-mid-3@2x.png", "images/bg-mid-4@2x.png", "images/bg-mid-5@2x.png", "images/bg-mid-6@2x.png", "images/bg-mid-7@2x.png", "images/bg-mid-8@2x.png", "images/bg-mid-9@2x.png", "images/bkg-panel@2x.png", "images/bkg-snow-foreground@2x.png", "images/bkg-snow-midground@2x.png", "images/sprite-clouds@2x.png", "images/sprite-people@2x.png", "images/sprite-social@2x.png", "images/midground-elem-1@2x.png", "images/midground-elem-2@2x.png", "images/midground-elem-3@2x.png", "images/midground-elem-4@2x.png", "images/midground-elem-5@2x.png", "images/midground-elem-6@2x.png", "images/midground-elem-7@2x.png", "images/touch-divider@2x.gif" ];
 } else {
 
 	// set default image list

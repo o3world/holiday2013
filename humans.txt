@@ -3,20 +3,21 @@
 
 # TEAM
 	
-	Chris Loringer     -- Designer       -- @cloringer
-    Brian Crumley      -- Developer      -- @briancrumley
-    David Dylan Thomas -- Content Writer -- @movie_pundit
+	Amber Ricks        -- Project Manager  -- @ambersaurusrex
+	Keith Scandone     -- Copywriter       -- @keitho3world‎
+	Jacob DeChant      -- Copywriter       -- @JWDeChant
+	Chris Loringer     -- Designer         -- @cloringer
+	Andrew Lee         -- Designer         -- @LeeVW
+	Marie Avila        -- Designer         -- for shame, no twitter
+    Brian Crumley      -- Developer        -- @briancrumley
 
 # THANKS
 
-    Barcamp Philadelphia 2013 Team
-    Mary Ann Geier, Maurice Gaston, Trevor Lalish-Menagh, Joe Campbell
-	
-    Ghosts of Barcamp Philadelphia's Past
-    Sarah Feidt, JP Toto
+    Thanks to the entire O3 World team for making it possible for us to deliver this project before the holiday.
+    A special thanks to all of our clients, new and old, in 2013. Here's a a happy, healthy, and productive 2014!
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
-	jQuery Waypoints, Placeholders.js
+	PreloadJS, Skrollr, ScrollTo
