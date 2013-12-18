@@ -29,7 +29,8 @@ var N = navigator.appName,
 var M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
 if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1];
 M = M ? [M[1], M[2]] : [N, navigator.appVersion, '-?'];
-console.log('Browser: ' + M[0] + " " + M[1]);
+
+//console.log('Browser: ' + M[0] + " " + M[1]);
 
 
 // function assigned to var for minimizing resize event calls - StackOverflow
@@ -127,8 +128,6 @@ function loadAll( ) {
 
 // function for loading next asset in array
 function loadAnother( ) {
-    
-    console.log( "here loadAnother" );
     
     // cycle forward in asset array
     var item = manifest.shift( );
@@ -229,8 +228,6 @@ jQuery( window ).resize( function( ) {
 	// recalculate parallax layer positions on resize
 	waitForFinalEvent( function( ) {
 		
-		console.log( "bitches!" );
-		
 		// recalculate parallax data attributes
 		calculateParallaxData( );
 		
@@ -246,31 +243,3 @@ jQuery( window ).resize( function( ) {
  *
  ************************************************************************************************/
 
-
-jQuery( document ).ready( function( ) {
-	
-	// preload image assets; init site
-	initPreloader( );
-	
-	
-	// define static parallax data element
-	jQuery( parallaxBG ).attr( 'data-6600', 'right:0px;' );
-	jQuery( parallaxMG ).attr( 'data-6600', 'right:0px;' );
-	
-	// set initial parallax element data positions
-	calculateParallaxData( );
-	
-	
-	// modernizr test for touch device to determine screen text
-	if( Modernizr.touch ) {
-		
-		// is touch
-		jQuery( '.arrow-left' ).after( 'Touch to Move Left' );
-		jQuery( '.arrow-right' ).before( 'Touch to Move Right' );
-	} else {
-		
-		// not touch
-		jQuery( '.arrow-left' ).after( 'Click/Scroll to Move Left' );
-		jQuery( '.arrow-right' ).before( 'Click/Scroll to Move Right' );
-	}
-} );

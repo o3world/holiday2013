@@ -1,0 +1,384 @@
+/*
+ * 768 breakpoint CSS
+ * 
+ ************************************************************************************************/
+
+
+/*
+ * breakpoint variable
+ *
+ ****************************************************************************/
+
+
+$breakpoint: 768;
+
+body:after {
+	content: 'tablet-portrait';
+	display: none;
+}
+
+
+/*
+ * base elements
+ *
+ ****************************************************************************/
+
+
+/*
+ * links
+ * 
+ ********************************************************/
+
+// universal link treatment
+a {
+	color: $c-brand; @include transition( color, .5s );
+
+	&:hover { text-decoration: none; color: $c-branddark; }
+}
+
+
+/*
+ * mobile only screen
+ *
+ ****************************************************************************/
+
+#sad-panda { display: none; }
+
+
+/*
+ * preloader
+ *
+ ****************************************************************************/
+
+#preload-container {
+	z-index: 500; position: fixed; @include linear-gradient( $c-skydark, $c-skylight ); width: 100%; height: 100%;
+}
+
+.preloader {
+	position: absolute; bottom: 50%; left: 50%; margin-bottom: -100px; margin-left: -85px; width: 171px; height: 800px; background: url( '../images/bkg-preload.png' ) no-repeat 0 0;
+}
+
+.preloader-content {
+	position: absolute; bottom: 0; padding-top: 15px; width: 171px; height: 146px; text-align: center;
+	
+	strong { display: block; @include font-size( 20 ); color: #fff; }
+}
+
+.preloader-animation { @include inline-block( ); width: 96px; height: 96px; background: url( '../images/preload-animation.gif' ) no-repeat 0 0; }
+
+
+/*
+ * touch control hint
+ *
+ ****************************************************************************/
+
+#touch-control {
+	z-index: 200; position: fixed; opacity: 1; width: 100%; height: 100%; background: rgba( #fff, .5 ) url( '../images/touch-divider.gif' ) repeat-y 50% 0;
+}
+
+// default touch tip
+.touch-hint {
+	position: absolute; bottom: 100px; box-shadow: 0 0 10px rgba( #000, .3 ); width: 230px; background-color: $c-brand; text-align: center; line-height: 50px; @include font-size( 20 ); font-weight: bold; color: #fff;
+}
+
+#scrollLeft, #scrollRight { width: 50%; cursor: pointer; height: 100%; position: absolute; top: 0; left: 50%; z-index: 2000; }
+
+#scrollLeft { left: 0; }
+
+// specific touch hints
+.touch-hint-left { left: 50px; }
+.touch-hint-right { right: 50px; }
+
+// base directional arrow
+.direction-arrow { @include inline-block( ); margin-top: 18px; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+
+// unique directional arrows
+.arrow-left { margin-right: 10px; border-right: 7px solid #fff; }
+.arrow-right { margin-left: 10px; border-left: 7px solid #fff; }
+
+
+/*
+ * social icons
+ *
+ ****************************************************************************/
+
+.social-container {
+	position: fixed; top: -40px; right: 40px; display: block;
+}
+
+// generic social container
+.social-item {
+	position: relative; @include inline-block( ); margin-left: 12px; width: 39px; height: 120px; background: url( '../images/sprite-social.png' ) no-repeat 0 0;
+	
+	&:first-child { margin-left: 0; }
+	
+	// social link within each container
+	a { position: absolute; bottom: 0; display: block; width: 39px; height: 39px; text-indent: -9999px; }
+}
+
+// specific social elements
+.social-facebook	 { /* default position */ }
+.social-twitter		 { top: -5px; background-position: -39px 0; }
+.social-googleplus	 { top: 15px; background-position: -78px 0; }
+
+
+/*
+ * base parallax definitions
+ *
+ ****************************************************************************/
+
+#skrollr-body { display: block; }
+
+#scene {
+	position: fixed; bottom: 0; width: 100%; @include linear-gradient( $c-skydark, $c-skylight ); height: 100%;
+}
+
+.parallax-layer { position: absolute; height: 700px; background-repeat: no-repeat; }
+
+
+/*
+ * parallax layers
+ *
+ ****************************************************************************/
+
+
+/*
+ * background parallax (skyline)
+ *
+ ********************************************************/
+
+#bg-1 { bottom: 0; width: 9912px; /* background: url( '../images/bg-background.png' ); background-position: left bottom; background-repeat: no-repeat; */ }
+
+// generic background tile
+.bg-back-tile { position: absolute; bottom: 0; width: 821px; height: 700px; }
+
+// specific background tiles
+.bg-back-tile-1	 { left: 0; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-2	 { left: 821px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-3	 { left: 1642px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-4	 { left: 2463px; background: url( '../images/bg-back-4.png' ); }
+.bg-back-tile-5	 { left: 3284px; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-6	 { left: 4105px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-7	 { left: 4926px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-8	 { left: 5747px; background: url( '../images/bg-back-4.png' ); }
+.bg-back-tile-9	 { left: 6568px; background: url( '../images/bg-back-1.png' ); }
+.bg-back-tile-10 { left: 7419px; background: url( '../images/bg-back-2.png' ); }
+.bg-back-tile-11 { left: 8240px; background: url( '../images/bg-back-3.png' ); }
+.bg-back-tile-12 { left: 9091px; background: url( '../images/bg-back-4.png' ); }
+
+
+/*
+ * midground parallax (buildings)
+ *
+ ********************************************************/
+
+#bg-2 { bottom: 0; width: 7390px; }
+
+// generic background tile
+.bg-mid-tile { z-index: 10; position: absolute; bottom: 0; width: 821px; height: 700px; }
+
+// specific background tiles
+.bg-mid-tile-1	 { left: 0; background: url( '../images/bg-mid-1.png' ); }
+.bg-mid-tile-2	 { left: 821px; background: url( '../images/bg-mid-2.png' ); }
+.bg-mid-tile-3	 { left: 1642px; background: url( '../images/bg-mid-3.png' ); }
+.bg-mid-tile-4	 { left: 2463px; background: url( '../images/bg-mid-4.png' ); }
+.bg-mid-tile-5	 { left: 3284px; background: url( '../images/bg-mid-5.png' ); }
+.bg-mid-tile-6	 { left: 4105px; background: url( '../images/bg-mid-6.png' ); }
+.bg-mid-tile-7	 { left: 4926px; background: url( '../images/bg-mid-7.png' ); }
+.bg-mid-tile-8	 { left: 5747px; background: url( '../images/bg-mid-8.png' ); }
+.bg-mid-tile-9	 { left: 6568px; background: url( '../images/bg-mid-9.png' ); }
+
+
+/*
+ * foreground elements (vehicles)
+ *
+ ********************************************************/
+
+#bg-2-sub-elements { z-index: 40; position: absolute; bottom: 0; width: 7390px; height: 700px; }
+
+// generic background tile
+.bg-fore-elem { position: absolute; }
+
+// specific foreground elements
+.bg-fore-elem-1	{ bottom: 23px; left: 615px; width: 387px; height: 111px; background: url( '../images/midground-elem-1.png' ) no-repeat 0 0; }
+.bg-fore-elem-2	{ bottom: 555px; left: 1212px; width: 433px; height: 91px; background: url( '../images/midground-elem-2.png' ) no-repeat 0 0; }
+.bg-fore-elem-3	{ bottom: 20px; left: 2886px; width: 234px; height: 286px; background: url( '../images/midground-elem-3.png' ) no-repeat 0 0; }
+.bg-fore-elem-4	{ bottom: 388px; left: 3128px; width: 128px; height: 207px; background: url( '../images/midground-elem-4.png' ) no-repeat 0 0; }
+.bg-fore-elem-5	{ bottom: 10px; left: 4395px; width: 218px; height: 103px; background: url( '../images/midground-elem-5.png' ) no-repeat 0 0; }
+.bg-fore-elem-6	{ bottom: 44px; left: 4880px; width: 254px; height: 75px; background: url( '../images/midground-elem-6.png' ) no-repeat 0 0; }
+.bg-fore-elem-7	{ bottom: 20px; left: 6438px; width: 222px; height: 104px; background: url( '../images/midground-elem-7.png' ) no-repeat 0 0; }
+
+
+/*
+ * snow elements
+ *
+ ****************************************************************************/
+
+// midground snowfall animation
+@keyframes snow-midground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 400px 400px}
+}
+@-moz-keyframes snow-midground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 400px 400px }
+}
+@-webkit-keyframes snow-midground {
+	0% { background-position: 0px 0px }
+ 	100% { background-position: 400px 400px }
+}
+@-ms-keyframes snow-midground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 400px 400px }
+}
+
+// midground snow definition
+.snow-midground {
+	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-midground.png'); @include animation( snow-midground, 20s, linear, infinite );
+}
+
+// foreground snowfall animation
+@keyframes snow-foreground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 500px 1000px }
+}
+@-moz-keyframes snow-foreground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 500px 1000px }
+}
+@-webkit-keyframes snow-foreground {
+	0% { background-position: 0px 0px }
+ 	100% { background-position: 500px 1000px }
+}
+@-ms-keyframes snow-foreground {
+	0% { background-position: 0px 0px }
+	100% { background-position: 500px 1000px }
+}
+
+// midground snow definition
+.snow-foreground {
+	position: fixed; width: 100%; height: 100%; background-image: url('../images/bkg-snow-foreground.png'); @include animation( snow-foreground, 20s, linear, infinite );
+}
+
+/*
+ * foreground parallax (street level)
+ *
+ ********************************************************/
+
+#bg-3 {
+	position: absolute; bottom: 0; width: 7390px; height: 700px; }
+
+.bg-road { position: absolute; bottom: 0; width: 7390px; height: 73px; background: $c-road; }
+
+
+/*
+ * content region definitions
+ *
+ ****************************************************************************/
+
+#bg-panels { width: 7390px; height: 100%; }
+
+.panel-content { z-index: 200; position: absolute; left: 122px; margin-top: 0; text-align: center; }
+
+// text rows
+.ribbon-2 { @include font-size( 28 ); }
+.ribbon-3 { margin-left: 0; }
+
+// intro container
+#intro-content {
+	bottom: 330px; left: 122px;
+	
+	// compensate for ribbon edge
+	.ribbon-3 { margin-left: 20px; }
+}
+
+// outro container
+#outro-content { bottom: 270px; left: 7030px; }
+
+
+/*
+ * cloud regions
+ *
+ ****************************************************************************/
+
+// individual default cloud
+.cloud { position: absolute; bottom: 400px; width: 8000px; height: 250px; background: url( '../images/sprite-clouds.png' ) no-repeat 0 0; }
+
+// unique cloud sprites
+.cloud-1 { /* default position */ }
+.cloud-2 { background-position: 0 -250px; }
+
+
+/*
+ * individual people elements
+ *
+ ****************************************************************************/
+
+// individual default person
+.person { z-index: 300; position: absolute; display: block; height: 120px; background: url( '../images/sprite-people.png' ); text-indent: -9999px; }
+
+// unique people
+#person-andrew 	{ bottom: -10px; left: 1065px; width: 82px; background-position: -651px 0; }
+#person-amber 	{ bottom: 20px; left: 5560px; width: 82px; background-position: -977px 0; }
+#person-brian 	{ bottom: -5px; left: 1150px; width: 82px; /* default position */ }
+#person-chris 	{ bottom: 20px; left: 1880px; width: 82px; background-position: -733px 0; }
+#person-dane 	{ bottom: 55px; left: 4115px; width: 81px; background-position: -407px 0; }
+#person-howie 	{ bottom: 55px; left: 4050px; width: 81px; background-position: -326px 0; }
+#person-jack 	{ bottom: 5px; left: 2615px; width: 81px; background-position: -164px 0; }
+#person-jacob 	{ bottom: 10px; left: 5325px; width: 82px; background-position: -895px 0; }
+#person-jay 	{ bottom: 15px; left: 1815px; width: 82px; background-position: -82px 0; }
+#person-john 	{ bottom: 10px; left: 6005px; width: 81px; background-position: -1059px 0; }
+#person-justin 	{ bottom: 0; left: 2680px; width: 81px; background-position: -245px 0; }
+#person-keith 	{ bottom: 10px; left: 6205px; width: 81px; background-position: -1140px 0; }
+#person-kris 	{ bottom: 5px; left: 5400px; width: 81px; background-position: -488px 0; }
+#person-mike 	{ bottom: 25px; left: 6150px; width: 82px; background-position: -1221px 0; }
+#person-marie 	{ bottom: 20px; left: 5485px; width: 80px; background-position: -815px 0; }
+#person-robby 	{ bottom: 35px; left: 6070px; width: 82px; background-position: -569px 0; }
+
+
+/*
+ * fact elements
+ *
+ ****************************************************************************/
+
+#container-facts { z-index: 50; position: absolute; width: 5500px; height: 700px; }
+
+// generic fact item
+.fact { position: absolute; bottom: 200px; display: table; box-shadow: 0 0 10px rgba( #000, .3 ); border-radius: 4px; border: 1px solid #fff; width: 285px; height: 120px; @include linear-gradient( $c-neutrallight, $c-neutral ); }
+
+// fact content container for vertical centering
+.fact-content { display: table-cell; padding: 0 15px; vertical-align: middle; text-align: center; }
+
+// generic pointer arrow
+.fact-arrow { position: absolute; left: 50%; margin-left: -16px; border-right: 16px solid transparent; border-left: 16px solid transparent; width: 0; height: 0; }
+
+// direction specific arrows
+.fact-arrow-top { top: -16px; border-bottom: 16px solid $c-neutrallight; }
+.fact-arrow-bottom { bottom: -16px; border-top: 16px solid $c-neutral; }
+
+// specific facts
+#f-1 	{ left: 615px; bottom: 150px; width: 190px; }
+#f-2 	{ left: 732px; bottom: 150px; width: 220px; } 
+#f-3 	{ left: 1036px; bottom: 218px; width: 260px; }
+#f-4 	{ left: 1256px; bottom: 412px; width: 335px; }
+#f-5 	{ left: 1538px; bottom: 340px; width: 250px; }
+#f-6 	{ left: 1775px; bottom: 395px; width: 285px; }
+#f-7 	{ left: 2004px; bottom: 280px; width: 310px; }
+#f-8 	{ left: 2302px; bottom: 450px; width: 240px; }
+#f-9 	{ left: 2572px; bottom: 380px; width: 220px; }
+#f-10 	{ left: 2825px; bottom: 130px; width: 275px; }
+#f-11 	{ left: 3042px; bottom: 244px; width: 300px; }
+#f-12 	{ left: 3330px; bottom: 320px; width: 240px; }
+#f-13 	{ left: 3605px; bottom: 350px; width: 230px; }
+#f-14 	{ left: 3822px; bottom: 235px; width: 285px; }
+#f-15 	{ left: 4070px; bottom: 325px; width: 300px; }
+#f-16 	{ left: 4362px; bottom: 120px; width: 200px; }
+#f-17 	{ left: 4624px; bottom: 425px; width: 250px; }
+#f-18 	{ left: 4890px; bottom: 140px; width: 240px; }
+#f-19 	{ left: 5074px; bottom: 352px; width: 230px; }
+#f-20 	{ left: 5366px; bottom: 415px; width: 320px; }
+#f-21 	{ left: 5645px; bottom: 250px; width: 260px; }
+#f-22 	{ left: 5915px; bottom: 355px; width: 210px; }
+#f-23 	{ left: 6170px; bottom: 250px; width: 240px; }
+#f-24 	{ left: 6384px; bottom: 135px; width: 240px; }
+#f-25 	{ left: 6625px; bottom: 172px; width: 300px; }

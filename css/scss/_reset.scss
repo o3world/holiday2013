@@ -34,7 +34,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 audio, canvas, video { @include inline-block(); width: 240px; height: 135px; }
 audio:not([controls]) { display: none; height: 0; }
 
-[hidden] { display: none; } 	
+[hidden] { display: none; }
 
 
 // paragraph and list style resets
