@@ -14,7 +14,13 @@ html {
 	/* adjusts the font "weight" in webkit browsers to more closely match others - http://maxvoltar.com/archive/-webkit-font-smoothing */
 	-webkit-font-smoothing: antialiased;
 	-ms-text-size-adjust: 100%;
-	@include tap-highlight-color(rgba(0, 38, 73, .5)); }
+	@include tap-highlight-color(rgba(0, 38, 73, .5));
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; }
 
 body {
 	height: 100%;
