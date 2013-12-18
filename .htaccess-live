@@ -1,0 +1,18 @@
+# Begin http auth
+#	AuthUserFile /var/protected/htpasswds/holiday2013.htpasswd
+#	AuthgroupFile /dev/null
+#	AuthName "Please enter your password"
+#	AuthType Basic
+#	require user holiday
+	# End http auth
+
+
+#DirectoryIndex index.html index.htm
+#Options +Indexes
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteCond %{REQUEST_URI} !^/holiday2013/.*$
+  RewriteRule ^ index.html [L]
+
