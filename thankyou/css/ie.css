@@ -1,0 +1,749 @@
+/**************************************************************************************************
+**
+** Mixins for common CSS properties
+**
+***************************************************************************************************/
+/**************************************************************************************************
+**
+** Normalize CSS
+**
+***************************************************************************************************/
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 28, scss/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 38, scss/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 47, scss/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 58, scss/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 72, scss/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 82, scss/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 94, scss/_normalize.scss */
+a {
+  background: transparent; }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 102, scss/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 111, scss/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 124, scss/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 133, scss/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 142, scss/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 150, scss/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 158, scss/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 168, scss/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 180, scss/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 189, scss/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+/* line 197, scss/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 205, scss/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 214, scss/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 221, scss/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 225, scss/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 237, scss/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 245, scss/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 257, scss/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 269, scss/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 280, scss/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 294, scss/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 306, scss/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 318, scss/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 333, scss/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 343, scss/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 353, scss/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 364, scss/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 377, scss/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 386, scss/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 396, scss/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 409, scss/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**************************************************************************************************
+**
+** Global resets
+**
+***************************************************************************************************/
+/* line 7, scss/_global.scss */
+* {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 10, scss/_global.scss */
+html {
+  height: 100%;
+  background: #88b6d2;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 12, scss/_global.scss */
+body {
+  height: 100%;
+  color: black;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5em; }
+
+/* line 15, scss/_global.scss */
+p {
+  line-height: 1.5em; }
+
+/* line 16, scss/_global.scss */
+p + p {
+  margin-top: 1.5em; }
+
+/* line 17, scss/_global.scss */
+dl, ol, ul {
+  margin-bottom: 1.5em;
+  line-height: 1.5em; }
+
+/* line 18, scss/_global.scss */
+ol, ul {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0 0 0 1.5em; }
+
+/* line 19, scss/_global.scss */
+li ol, li ul {
+  margin: 0; }
+
+/* line 23, scss/_global.scss */
+input,
+select,
+textarea {
+  display: block;
+  width: 100%; }
+
+/* line 25, scss/_global.scss */
+label {
+  display: block; }
+
+/* line 27, scss/_global.scss */
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 28, scss/_global.scss */
+  .unstyled li {
+    margin-left: 0; }
+
+/* line 32, scss/_global.scss */
+:focus {
+  outline: 0; }
+
+/* line 35, scss/_global.scss */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  /* clean up janky edges of scaled images in IE<9 */
+  -moz-user-drag: -moz-none;
+  -webkit-user-drag: none;
+  user-drag: none; }
+
+/* line 41, scss/_global.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+/* line 42, scss/_global.scss */
+.cf:after {
+  clear: both; }
+
+/* line 43, scss/_global.scss */
+.cf {
+  *zoom: 1; }
+
+/* for IE 6/7 to trigger hasLayout */
+/* line 1, scss/_base.scss */
+button {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  margin-left: -144px;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cb0000), to(#af0101)) 0 0;
+  background: -moz-linear-gradient(top, #cb0000, #af0101) 0 0;
+  background: -ms-linear-gradient(top, #cb0000, #af0101);
+  background: -o-linear-gradient(top, #cb0000, #af0101); }
+
+/* line 3, scss/_base.scss */
+.back {
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: 120px;
+  display: block;
+  padding-left: 38px;
+  background: url("../images/back.png") no-repeat left center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  z-index: 9999; }
+
+/* line 5, scss/_base.scss */
+.wrapper {
+  min-width: 738px;
+  min-height: 775px; }
+
+/* line 7, scss/_base.scss */
+.header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  z-index: 9999; }
+
+/* line 9, scss/_base.scss */
+.o3-logo {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+  width: 82px;
+  height: 82px;
+  background: url("../images/o3-logo.png");
+  text-indent: -9999px; }
+
+/* line 10, scss/_base.scss */
+.logo {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 117px;
+  height: 82px;
+  background: url("../images/logo.png");
+  text-indent: -9999px; }
+
+/* line 12, scss/_base.scss */
+.scene {
+  position: relative;
+  margin: 30px auto 0 auto;
+  height: 580px;
+  border-bottom: 5px solid #80a8c1; }
+
+/* line 14, scss/_base.scss */
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 422px;
+  height: 580px;
+  background: url("../images/tree.png"); }
+
+/* line 16, scss/_base.scss */
+.person {
+  position: absolute;
+  bottom: -35px;
+  display: block;
+  width: 282px;
+  height: 406px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000; }
+  /* line 18, scss/_base.scss */
+  .person.gadsby {
+    background: url("../images/gadsby.png") no-repeat center; }
+  /* line 19, scss/_base.scss */
+  .person.keith {
+    background: url("../images/keith.png") no-repeat center; }
+  /* line 21, scss/_base.scss */
+  .person.big {
+    width: 336px;
+    height: 470px; }
+    /* line 22, scss/_base.scss */
+    .person.big.gadsby {
+      background: url("../images/gadsby-big.png") no-repeat center; }
+    /* line 23, scss/_base.scss */
+    .person.big.keith {
+      background: url("../images/keith-big.png") no-repeat center; }
+    /* line 24, scss/_base.scss */
+    .person.big.center {
+      left: 50%;
+      margin-left: -168px; }
+  /* line 27, scss/_base.scss */
+  .person span {
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    width: 100%; }
+
+/* line 31, scss/_base.scss */
+.built-person img {
+  margin: 0 auto; }
+
+/* line 34, scss/_base.scss */
+h1 {
+  text-indent: -9999px; }
+
+/* line 36, scss/_base.scss */
+.thanks {
+  position: absolute;
+  top: 40px; }
+
+/* line 38, scss/_base.scss */
+.choose {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -70px;
+  width: 139px;
+  height: 99px;
+  background: url("../images/choose.png") no-repeat center;
+  text-indent: -9999px; }
+
+/* line 40, scss/_base.scss */
+.title {
+  position: absolute;
+  top: 40px;
+  height: 59px; }
+  /* line 42, scss/_base.scss */
+  .title.gadsby {
+    width: 387px;
+    background: url("../images/gadsbyipsum.png") no-repeat center; }
+  /* line 43, scss/_base.scss */
+  .title.keith {
+    width: 405px;
+    background: url("../images/dressupkeith.png") no-repeat center; }
+
+/* line 46, scss/_base.scss */
+.bubble {
+  position: absolute;
+  top: 150px;
+  padding: 10px;
+  width: 270px;
+  min-height: 370px;
+  -webkit-box-shadow: 0 0 20px #787878 ;
+  -moz-box-shadow: 0 0 20px #787878 ;
+  box-shadow: 0 0 20px #787878 ;
+  background: #fff;
+  font-size: 30px;
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.2em;
+  -ms-word-wrap: break-all;
+  word-wrap: break-all;
+  word-wrap: break-word; }
+
+/* line 48, scss/_base.scss */
+.bubble-nub {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #fff; }
+
+/* line 50, scss/_base.scss */
+.body-part {
+  position: relative; }
+
+/* line 1, scss/_768.scss */
+.scene {
+  width: 738px; }
+
+/* line 5, scss/_768.scss */
+.tree.left {
+  left: 0; }
+/* line 6, scss/_768.scss */
+.tree.right {
+  right: 0; }
+
+/* line 11, scss/_768.scss */
+.person.left {
+  left: 50px; }
+/* line 12, scss/_768.scss */
+.person.right {
+  right: 50px; }
+
+/* line 16, scss/_768.scss */
+.thanks {
+  margin-left: -5px;
+  width: 758px;
+  height: 220px;
+  background: url("../images/thankyou-tablet.png") no-repeat center 0; }
+
+/* line 18, scss/_768.scss */
+.title {
+  left: 300px; }
+
+/* line 20, scss/_768.scss */
+.bubble {
+  right: 50px; }
+
+/* line 1, scss/_1024.scss */
+.scene {
+  width: 900px; }
+
+/* line 3, scss/_1024.scss */
+.thanks {
+  margin-left: -60px;
+  width: 988px;
+  height: 287px;
+  background: url("../images/thankyou.png") no-repeat center 0; }
+
+/* line 7, scss/_1024.scss */
+.tree.left {
+  left: -40px; }
+/* line 8, scss/_1024.scss */
+.tree.right {
+  right: -40px; }
+
+/* line 13, scss/_1024.scss */
+.person.left {
+  left: 135px; }
+/* line 14, scss/_1024.scss */
+.person.right {
+  right: 135px; }
+
+/* line 18, scss/_1024.scss */
+.title {
+  left: 280px; }
+
+/* line 20, scss/_1024.scss */
+.bubble {
+  right: 100px; }
+
+/* line 3, scss/_1200.scss */
+.tree.left {
+  left: -50px; }
+/* line 4, scss/_1200.scss */
+.tree.right {
+  right: -90px; }

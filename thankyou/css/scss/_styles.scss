@@ -1,0 +1,32 @@
+//Set-up variables and mixins
+@import "variables";
+@import "mixins";
+
+//CSS resets
+@import "normalize";
+@import "global";
+
+//Base CSS
+@import "base";
+
+//Tablet
+@import	"768";
+
+//Desktop
+@media only screen and (min-width: 1024px) { 
+	@import	"1024";
+}
+
+@media only screen and (min-width: 1200px) { 
+	@import	"1200";
+}
+
+//Retina
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+	@import "retina";
+}

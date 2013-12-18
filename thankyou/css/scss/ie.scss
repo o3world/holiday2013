@@ -1,0 +1,17 @@
+//Set-up variables and mixins
+@import "variables";
+@import "mixins";
+
+//CSS resets
+@import "normalize";
+@import "global";
+
+//Base CSS
+@import "base";
+
+//Tablet
+@import	"768";
+
+//Desktop
+@import	"1024";
+@import "1200";

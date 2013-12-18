@@ -1,0 +1,43 @@
+/**************************************************************************************************
+**
+** Global resets
+**
+***************************************************************************************************/
+
+* { margin: 0; border: 0; outline: 0; padding: 0; vertical-align: baseline; -moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html { height: 100%; background: $bodyColor; font-size: 100%; -webkit-font-smoothing: antialiased; }
+
+body { height: 100%; color: $textColor; font-size: #{$baseFontSize}px; font-family: $baseFont; line-height: $baseLineHeight; }
+
+//Paragraph and list style resets
+p { line-height: $baseLineHeight; }
+p + p { margin-top: $baseLineHeight; }
+dl, ol, ul 	{ margin-bottom: $baseLineHeight; line-height: $baseLineHeight; }
+ol, ul 			{ margin: 0 0 $baseLineHeight $baseLineHeight; padding: 0 0 0 $baseLineHeight; }
+li ol, li ul 	{ margin: 0; }
+
+input,
+select,
+textarea { display: block; width: 100%; }
+
+label { display: block; }
+
+.unstyled { margin: 0; padding: 0; list-style: none;
+	li { margin-left: 0; }
+}
+
+//Element focus style reset
+:focus { outline: 0; }
+
+//Image settings for responsive and non-dragable
+img { display: block; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; /* clean up janky edges of scaled images in IE<9 */ 
+	-moz-user-drag: -moz-none; -webkit-user-drag: none; user-drag: none; 
+}
+
+//Clear fix - http://nicolasgallagher.com/micro-clearfix-hack/
+.cf:before,
+.cf:after	{ content: " "; display: table; }
+.cf:after	{ clear: both; }
+.cf			{ *zoom: 1; } /* for IE 6/7 to trigger hasLayout */

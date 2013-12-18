@@ -1,0 +1,20 @@
+.scene { width: 900px; }
+
+.thanks { margin-left: -60px; width: 988px; height: 287px; background: url('../images/thankyou.png') no-repeat center 0; }
+
+.tree {
+	 
+	 &.left { left: -40px; }
+	 &.right { right: -40px; }
+}
+
+.person {
+
+	&.left { left: 135px; }
+	&.right { right: 135px; }
+
+}
+
+.title { left: 280px; }
+
+.bubble { right: 100px; }

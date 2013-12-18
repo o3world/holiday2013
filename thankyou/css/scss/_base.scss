@@ -1,0 +1,50 @@
+button { position: absolute; bottom: -150px; left: 50%; margin-left: -144px; padding: 20px; @include linear-gradient(#cb0000, #af0101); }
+
+.back { display: block; position: absolute; left: 80px; top: 120px; display: block; padding-left: 38px; background: url('../images/back.png') no-repeat left center; text-decoration: none; font-weight: bold; color: #000; z-index: 9999; }
+
+.wrapper { min-width: 738px; min-height: 775px; }
+
+.header { display: block; position: absolute; top: 0; left: 0; font-size: 0; z-index: 9999; }
+
+.o3-logo { @include inline-block(); float: left; width: 82px; height: 82px; background: url('../images/o3-logo.png'); text-indent: -9999px; }
+.logo { @include inline-block(); width: 117px; height: 82px; background: url('../images/logo.png'); text-indent: -9999px; }
+
+.scene { position: relative; margin: 30px auto 0 auto; height: 580px; border-bottom: 5px solid #80a8c1; }
+
+.tree { position: absolute; bottom: 0; width: 422px; height: 580px; background: url('../images/tree.png'); }
+
+.person { position: absolute; bottom: -35px; display: block; width: 282px; height: 406px; text-align: center; text-decoration: none; font-weight: bold; color: #000;
+
+	&.gadsby { background: url('../images/gadsby.png') no-repeat center; }
+	&.keith { background: url('../images/keith.png') no-repeat center; }
+
+	&.big { width: 336px; height: 470px; 
+		&.gadsby { background: url('../images/gadsby-big.png') no-repeat center; }
+		&.keith { background: url('../images/keith-big.png') no-repeat center; }
+		&.center { left: 50%; margin-left: -168px; }
+	}
+
+	span { display: block; position: absolute; bottom: -25px; width: 100%; }
+}
+
+.built-person {
+	img { margin: 0 auto; }
+}
+
+h1 { text-indent: -9999px; }
+
+.thanks { position: absolute; top: 40px;}
+
+.choose { position: absolute; bottom: 0; left: 50%; margin-left: -70px; width: 139px; height: 99px; background: url('../images/choose.png') no-repeat center; text-indent: -9999px; }
+
+.title { position: absolute; top: 40px; height: 59px;
+
+	&.gadsby { width: 387px; background: url('../images/gadsbyipsum.png') no-repeat center; }
+	&.keith { width: 405px; background: url('../images/dressupkeith.png') no-repeat center; }
+}
+
+.bubble { position: absolute; top: 150px; padding: 10px; width: 270px; min-height: 370px; @include box-shadow(0, 0, 20px, #787878); background: #fff; font-size: 30px; font-family: "Helvetica", sans-serif; line-height: 1.2em; @include wordBreak(); }
+
+.bubble-nub { display: block; position: absolute; top: 50%; left: -30px; width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-right: 30px solid #fff; }
+
+.body-part { position: relative; }

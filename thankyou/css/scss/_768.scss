@@ -1,0 +1,20 @@
+.scene { width: 738px; }
+
+.tree {
+	 
+	 &.left { left: 0; }
+	 &.right { right: 0; }
+}
+
+.person {
+
+	&.left { left: 50px; }
+	&.right { right: 50px; }
+
+}
+
+.thanks { margin-left: -5px; width: 758px; height: 220px; background: url('../images/thankyou-tablet.png') no-repeat center 0; }
+
+.title { left: 300px; }
+
+.bubble { right: 50px; }
