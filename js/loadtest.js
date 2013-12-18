@@ -40,51 +40,47 @@ var device = 'mobile-portrait',
 // function that grabs the current value of the after pseudo class of the #mediaquery <div> and loads JS assets conditionally
 function deviceCheck( ) {
 	
-	if( isIE ) {
-		device = 'desktop';
-	} else {
-		device = window.getComputedStyle( mq, ":after" ).getPropertyValue( "content" );
-	
-		if( device != 'mobile-portrait' ) {
-						
-			// plugin load
-			jQuery.getScript( "js/plugins.min.js", function( ) {
+	device = window.getComputedStyle( mq, ":after" ).getPropertyValue( "content" );
+
+	if( device != 'mobile-portrait' ) {
+					
+		// plugin load
+		jQuery.getScript( "js/plugins.min.js", function( ) {
+			
+			// functionality load
+			jQuery.getScript( "js/funcs.min.js", function( ) {
 				
-				// functionality load
-				jQuery.getScript( "js/funcs.min.js", function( ) {
+				// preload image assets; init site
+				initPreloader( );
+				
+				// define static parallax data element
+				jQuery( parallaxBG ).attr( 'data-6600', 'right:0px;' );
+				jQuery( parallaxMG ).attr( 'data-6600', 'right:0px;' );
+				
+				// set initial parallax element data positions
+				calculateParallaxData( );
+				
+				// modernizr test for touch device to determine screen text
+				if( Modernizr.touch ) {
 					
-					// preload image assets; init site
-					initPreloader( );
+					// is touch
+					jQuery( '.arrow-left' ).after( 'Touch & Hold to Move Left' );
+					jQuery( '.arrow-right' ).before( 'Touch & Hold to Move Right' );						
+				} else {
 					
-					// define static parallax data element
-					jQuery( parallaxBG ).attr( 'data-6600', 'right:0px;' );
-					jQuery( parallaxMG ).attr( 'data-6600', 'right:0px;' );
+					// not touch
+					jQuery( '.arrow-left' ).after( 'Click/Scroll to Move Left' );
+					jQuery( '.arrow-right' ).before( 'Click/Scroll to Move Right' );
 					
-					// set initial parallax element data positions
-					calculateParallaxData( );
+					// add snow animation and cloud parallax
+					jQuery( '.snow-midground' ).before( '<div id="cloud-1" class="cloud cloud-1 parallax-layer" data-0="left:500px;" data-6600="left:0px;"></div>' );						
+					jQuery( '.snow-foreground' ).before( '<div id="cloud-2" class="cloud cloud-2 parallax-layer" data-0="left:-500px;" data-6600="left:0px;"></div>' );
 					
-					// modernizr test for touch device to determine screen text
-					if( Modernizr.touch ) {
-						
-						// is touch
-						jQuery( '.arrow-left' ).after( 'Touch & Hold to Move Left' );
-						jQuery( '.arrow-right' ).before( 'Touch & Hold to Move Right' );						
-					} else {
-						
-						// not touch
-						jQuery( '.arrow-left' ).after( 'Click/Scroll to Move Left' );
-						jQuery( '.arrow-right' ).before( 'Click/Scroll to Move Right' );
-						
-						// add snow animation and cloud parallax
-						jQuery( '.snow-midground' ).before( '<div id="cloud-1" class="cloud cloud-1 parallax-layer" data-0="left:500px;" data-6600="left:0px;"></div>' );						
-						jQuery( '.snow-foreground' ).before( '<div id="cloud-2" class="cloud cloud-2 parallax-layer" data-0="left:-500px;" data-6600="left:0px;"></div>' );
-						
-						jQuery( '.snow-midground' ).addClass( 'has-midground-animation' );
-						jQuery( '.snow-foreground' ).addClass( 'has-foreground-animation' );
-					}
-				} );
+					jQuery( '.snow-midground' ).addClass( 'has-midground-animation' );
+					jQuery( '.snow-foreground' ).addClass( 'has-foreground-animation' );
+				}
 			} );
-		}
+		} );
 	}
 };
 

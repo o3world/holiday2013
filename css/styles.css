@@ -721,6 +721,7 @@ p, ul, ol, dd {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #d0e8f5;
     background: -webkit-linear-gradient(top, #b4d1e1 0%, #d0e8f5 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(#b4d1e1), to(#d0e8f5)) 0 0;
     background: -moz-linear-gradient(top, #b4d1e1, #d0e8f5) 0 0;
@@ -1261,20 +1262,28 @@ p, ul, ol, dd {
     border: 1px solid #fff;
     width: 285px;
     height: 120px;
+    background-color: #d0e8f5;
     background: -webkit-linear-gradient(top, #fefefe 0%, #e2e2e2 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e2e2e2)) 0 0;
     background: -moz-linear-gradient(top, #fefefe, #e2e2e2) 0 0;
     background: -ms-linear-gradient(top, #fefefe, #e2e2e2);
     background: -o-linear-gradient(top, #fefefe, #e2e2e2); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003355}}
+  .ie9 .fact {
+    background-color: #fefefe; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003358}}
+  .ie9 .fact-arrow-bottom {
+    border-top: 16px solid #fefefe; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003362}}
   .fact-content {
     display: table-cell;
     padding: 0 15px;
     vertical-align: middle;
     text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003365}}
   .fact-arrow {
     position: absolute;
     left: 50%;
@@ -1284,161 +1293,161 @@ p, ul, ol, dd {
     width: 0;
     height: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003368}}
   .fact-arrow-top {
     top: -16px;
     border-bottom: 16px solid #fefefe; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003369}}
   .fact-arrow-bottom {
     bottom: -16px;
     border-top: 16px solid #e2e2e2; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003372}}
   #f-1 {
     left: 615px;
     bottom: 150px;
     width: 190px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003373}}
   #f-2 {
     left: 732px;
     bottom: 150px;
     width: 220px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003374}}
   #f-3 {
     left: 1036px;
     bottom: 218px;
     width: 260px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003375}}
   #f-4 {
     left: 1256px;
     bottom: 412px;
     width: 335px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003376}}
   #f-5 {
     left: 1538px;
     bottom: 340px;
     width: 250px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003377}}
   #f-6 {
     left: 1775px;
     bottom: 395px;
     width: 285px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003378}}
   #f-7 {
     left: 2004px;
     bottom: 280px;
     width: 310px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003379}}
   #f-8 {
     left: 2302px;
     bottom: 450px;
     width: 240px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003380}}
   #f-9 {
     left: 2572px;
     bottom: 380px;
     width: 220px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003381}}
   #f-10 {
     left: 2825px;
     bottom: 130px;
     width: 275px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003382}}
   #f-11 {
     left: 3042px;
     bottom: 244px;
     width: 300px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003383}}
   #f-12 {
     left: 3330px;
     bottom: 320px;
     width: 240px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003384}}
   #f-13 {
     left: 3605px;
     bottom: 350px;
     width: 230px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003385}}
   #f-14 {
     left: 3822px;
     bottom: 235px;
     width: 285px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003386}}
   #f-15 {
     left: 4070px;
     bottom: 325px;
     width: 300px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003387}}
   #f-16 {
     left: 4362px;
     bottom: 120px;
     width: 200px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003388}}
   #f-17 {
     left: 4624px;
     bottom: 425px;
     width: 250px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003389}}
   #f-18 {
     left: 4890px;
     bottom: 140px;
     width: 240px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003390}}
   #f-19 {
     left: 5074px;
     bottom: 352px;
     width: 230px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003391}}
   #f-20 {
     left: 5366px;
     bottom: 415px;
     width: 320px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003392}}
   #f-21 {
     left: 5645px;
     bottom: 250px;
     width: 260px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003393}}
   #f-22 {
     left: 5915px;
     bottom: 355px;
     width: 210px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003394}}
   #f-23 {
     left: 6170px;
     bottom: 250px;
     width: 240px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003395}}
   #f-24 {
     left: 6384px;
     bottom: 135px;
     width: 240px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/holiday2013\/css\/scss\/_768\.scss}line{font-family:\00003396}}
   #f-25 {
     left: 6625px;
     bottom: 172px;
