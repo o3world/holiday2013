@@ -5,7 +5,7 @@
 		
 		<title>Holiday 2013 | O3 World</title>
 		
-		<meta name="description" content="INSERT_ETA_DESCRIPTION" />
+		<meta name="description" content="To all our friends and families, happy holidays from O3 World! Here's to seeing everyone in 2014" />
 		<meta name="author" content="O3 World" />
 		
 		<!-- force IE to latest rendering engine for each version; chrome frame reference -->
@@ -35,24 +35,23 @@
 		<!-- retina iPad iOS 7 -->
 		<link rel="apple-touch-icon" href="icon-152.png" sizes="152x152">
 		
-		<link rel="stylesheet" href="css/styles.css" />
-		
-		<!--[if IE]><link rel="stylesheet" href="css/ie.min.css" /><![endif]-->
+		<link rel="stylesheet" href="css/styles.min.css" />
 		
 		<!-- build custom modernizr library for feature detection -->
 		<script type="text/javascript" src="js/modernizr-2.7.1.min.js"></script>
 		
-		<!-- google universal analytics -->
-		<script>
-			/*
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<!-- google analytics -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-10331191-1']);
+				_gaq.push(['_setSiteSpeedSampleRate', 100]);
+				_gaq.push(['_trackPageview']);
 			
-			ga('create', 'UA-XXXXXXXX-X', 'URL');
-			ga('send', 'pageview');
-			*/
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		</script>
 	</head>
 
@@ -86,8 +85,7 @@
 				
 				<!-- conditional - background clouds -->
 				
-				<!-- background snow -->
-				<div class="snow-midground"></div>
+				<!-- conditional - background snow -->
 				
 				<!-- background (skyline) -->
 				<div id="bg-1" class="parallax-layer">
@@ -109,8 +107,7 @@
 	            
 				<!-- conditional - midground clouds -->
 				
-				<!-- midground snow -->
-				<div class="snow-foreground"></div>
+				<!-- conditional - midground snow -->
 	            
 				<!-- midground (buildings) -->
 				<div id="bg-2" class="parallax-layer">
@@ -383,7 +380,7 @@
 		<!-- social links -->
 		<div class="social-container">
 			<div class="social-item social-facebook">
-				<a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http://www.o3world.com/holiday2013&amp;p[images][0]=http://www.o3world.com/holiday2013/images/temp.jpg&amp;p[title]=Happy%20Holidays%20from%20O3%20World&amp;p[summary]=A%20very%20special,%20Philadelphia-style%20O3%20World%20%20thank%20you%20to%20everyone%20we%20worked%20with%20this%20year" target="_blank" title="Share the O3 Holiday Card on Facebook">Share the O3 Holiday Card on Facebook</a>
+				<a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http://www.o3world.com/holiday2013&amp;p[images][0]=http://www.o3world.com/holiday2013/images/temp.jpg&amp;p[title]=Happy%20Holidays%20from%20O3%20World&amp;p[summary]=A%20very%20special&#44;%20Philadelphia-style%20O3%20World%20%20thank%20you%20to%20everyone%20we%20worked%20with%20this%20year" target="_blank" title="Share the O3 Holiday Card on Facebook">Share the O3 Holiday Card on Facebook</a>
 			</div>
 			<div class="social-item social-twitter">
 				<a href="http://twitter.com/home?status=A%20very%20special,%20Philadelphia-style%20O3%20World%20%20thank%20you%20to%20everyone%20we%20worked%20with%20this%20year%20-%20http://www.o3world.com/holiday2013" target="_blank" title="Share the O3 Holiday Card on Twitter">Share the O3 Holiday Card on Twitter</a>
@@ -398,6 +395,6 @@
 		<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
 		
 		<!-- loader script determining conditional plugin and functional JS -->
-		<script type="text/javascript" src="js/loadtest.js"></script>
+		<script type="text/javascript" src="js/loadtest.min.js"></script>
 	</body>	
 </html>
