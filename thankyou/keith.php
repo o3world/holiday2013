@@ -7,7 +7,7 @@
 
 	<h1 class="title keith">Dress Up Keith</h1>
 
-	<div class="person built-person big center">
+	<div class="person built-person big center body-overlap">
 		
 		<img class="body-part head" src="../images/keith/head-1.png" />
 		<img class="body-part body" src="../images/keith/body-1.png" />

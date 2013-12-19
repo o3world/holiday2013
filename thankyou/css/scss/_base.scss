@@ -48,3 +48,16 @@ h1 { text-indent: -9999px; }
 .bubble-nub { display: block; position: absolute; top: 50%; left: -30px; width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-right: 30px solid #fff; }
 
 .body-part { position: relative; }
+.head { z-index: 500; }
+.body { top: -23px; z-index: 200; }
+.legs { top: -66px; z-index: 300; }
+.shoes { top: -67px; z-index: 100; }
+
+.body-overlap {
+	.body { z-index: 400; }
+}
+
+.special-outfit {
+	.body { top: -35px; }
+	.legs { top: -35px; }
+}

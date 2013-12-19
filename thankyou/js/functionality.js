@@ -1,11 +1,14 @@
 //Create global namespace
 var O3 = O3 || {};
 
+O3.keithClickCounter = 1;
+
 jQuery(document).ready(function() {
 
 	jQuery('.randomize-outfit').on('click', function(){
 		O3.outfit = new O3.DressUpKeith();
 		O3.outfit.randomizeOutfit();
+		O3.keithClickCounter++;
 	});
 
 	jQuery('.create-ipsum').on('click', function(){
@@ -29,14 +32,54 @@ O3.DressUpKeith = function() {
 
 	var outfits = {
 
-		heads: [imageDirectory + 'head-1.png', imageDirectory + 'head-2.png'],
+		heads: [imageDirectory + 'head-1.png', imageDirectory + 'head-2.png', imageDirectory + 'head-3.png'],
 
-		bodies: [{src: imageDirectory + 'body-1.png', overlap: true}, {src: imageDirectory + 'body-2.png', overlap: false}],
+		bodies: [{src: imageDirectory + 'body-1.png', overlap: true}, {src: imageDirectory + 'body-2.png', overlap: false}, {src: imageDirectory + 'body-2.png', overlap: false}, {src: imageDirectory + 'body-4.png', overlap: false}],
 
-		legs: [imageDirectory + 'legs-1.png', imageDirectory + 'legs-2.png'],
+		legs: [imageDirectory + 'legs-1.png', imageDirectory + 'legs-2.png', imageDirectory + 'legs-3.png', imageDirectory + 'legs-4.png'],
 
-		shoes: [imageDirectory + 'shoes-1.png', imageDirectory + 'shoes-2.png', imageDirectory + 'shoes-3.png'],
+		shoes: [imageDirectory + 'shoes-1.png', imageDirectory + 'shoes-2.png', imageDirectory + 'shoes-3.png', imageDirectory + 'shoes-4.png'],
 	};
+
+	var manageBodyOverlap = function(overlap) {
+
+		var builtPerson = jQuery('.built-person');
+		var cssClass = 'body-overlap';
+
+		if (overlap) {
+
+			if (!builtPerson.hasClass(cssClass)) {
+				builtPerson.addClass(cssClass);
+			}
+
+		} else {
+
+			if (builtPerson.hasClass(cssClass)) {
+				builtPerson.removeClass(cssClass);
+			}
+
+		}
+	}
+
+	var manageSpecialOutfit = function(flag) {
+
+		var builtPerson = jQuery('.built-person');
+		var cssClass = 'special-outfit';
+
+		if (flag) {
+
+			if (!builtPerson.hasClass(cssClass)) {
+				builtPerson.addClass(cssClass);
+			}
+
+		} else {
+
+			if (builtPerson.hasClass(cssClass)) {
+				builtPerson.removeClass(cssClass);
+			}
+
+		}
+	}
 
 	this.randomizeOutfit = function() {
 		var head;
@@ -44,12 +87,13 @@ O3.DressUpKeith = function() {
 		var legs;
 		var shoes = O3.getRandomArrayValue(outfits.shoes);
 
-		//10% chance every time we get the "special" result
-		if (Math.floor(Math.random() * 10) + 1 == 4) {
+		if (O3.keithClickCounter % 7 === 0) {
 
-			head = imageDirectory + 'head-3.png';
-			body = imageDirectory + 'body-3.png';
-			legs = imageDirectory + 'legs-3.png';
+			head = imageDirectory + 'head-special.png';
+			body = imageDirectory + 'body-special.png';
+			legs = imageDirectory + 'legs-special.png';
+
+			manageSpecialOutfit(true);
 
 		} else {
 
@@ -59,12 +103,9 @@ O3.DressUpKeith = function() {
 			var bodyOverlap = bodyObj.overlap;
 			legs = O3.getRandomArrayValue(outfits.legs);
 
-			if (bodyOverlap) {
-				//Do stuff
-			} else {
-				//Do other stuff
-			}
-
+			manageSpecialOutfit(false);
+			manageBodyOverlap(bodyOverlap);
+			
 		}
 
 		jQuery('.built-person .head').attr('src', head);
@@ -83,7 +124,7 @@ O3.GadsbyIpsum = function() {
 
 		leads: ['honestly...', 'well...', 'you know...', 'ummm...'],
 
-		starters: ['not for nothing, but', 'see...this is what I\'m getting at', 'listen, at the end of the day', 'just so you\'re aware', 'to a certain degree', 'let me make this clear', 'let\'s be honest', 'I can tell you right now', 'correct me if I\'m wrong here but'],
+		starters: ['not for nothing, but', 'see...this is what I\'m getting at', 'listen, at the end of the day', 'just so you\'re aware', 'to a certain degree', 'let me make this clear', 'let\'s be honest', 'I can tell you right now', 'correct me if I\'m wrong here but', 'I will say this', 'let me just back up'],
 
 		connectors: ['and to be quite frank,', 'and I\'ll tell you why,', 'and to be fair,', 'and to some degree,'],
 

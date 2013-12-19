@@ -675,6 +675,36 @@ h1 {
 .body-part {
   position: relative; }
 
+/* line 51, scss/_base.scss */
+.head {
+  z-index: 500; }
+
+/* line 52, scss/_base.scss */
+.body {
+  top: -23px;
+  z-index: 200; }
+
+/* line 53, scss/_base.scss */
+.legs {
+  top: -66px;
+  z-index: 300; }
+
+/* line 54, scss/_base.scss */
+.shoes {
+  top: -67px;
+  z-index: 100; }
+
+/* line 57, scss/_base.scss */
+.body-overlap .body {
+  z-index: 400; }
+
+/* line 61, scss/_base.scss */
+.special-outfit .body {
+  top: -35px; }
+/* line 62, scss/_base.scss */
+.special-outfit .legs {
+  top: -35px; }
+
 /* line 1, scss/_768.scss */
 .scene {
   width: 738px; }
